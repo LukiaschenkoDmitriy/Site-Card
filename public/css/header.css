@@ -3,6 +3,7 @@
     justify-content: center;
     width: 100%; 
     background-color: rgb(245, 245, 245);
+    position: fixed;
 }
 
 .sub_head_container {

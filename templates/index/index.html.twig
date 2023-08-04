@@ -1,9 +1,35 @@
 {% extends "base.html.twig" %}
 
-{% block stylesheet %}
-    <link rel="stylesheet" href="asset('index.css')">
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/index.css')}}">
 {% endblock %}
 
 {% block body %}
-    
+    <div class="index_container">
+        <img src="" alt="My photo">
+        <div class="index_about_me">
+            <a href="" class="index_about_me_title"># About me</a>
+            <p>
+                Hello! My name is Dmytrii Lukiashchenko.
+                I am 18 years old. I am from Ukraine.
+                I have been in the field of programming for 4 years.
+                I know the syntax of languages such as:
+            </p>
+            <div>
+                <a href="">"Python"</a>
+                <a href="">"JavaScript"</a>
+                <a href="">"HTML"</a>
+                <a href="">"CSS"</a>
+                <a href="">"C#"</a>
+                <a href="">"Java"</a>
+                <a href="">"PHP"</a>
+            </div>
+            <p>
+                and a couple of libraries for them. 
+                I intend to continue to deepen my knowledge and find my favorite language, 
+                which is currently "PHP".
+            </p>
+            <a href="" class="index_more_button">More about me</a>
+        </div>
+    </div>
 {% endblock %}
