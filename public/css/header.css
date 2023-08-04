@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    background-color: rgb(245, 245, 245);
+}
+
+.sub_head_container {
+    display: flex;
+}
+
+.head_button {
+    box-sizing: border-box;
+    color: rgb(105, 105, 105);
+    text-decoration-line: none;
+
+    font-weight: 500;
+
+    padding: 10px 10px;
+    margin-right: 15px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0) ;
+
+    transition: color .5s ease;
+    transition: border .5s ease;
+}
+
+.port_button {
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+.head_button:hover {
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgba(128, 128, 128, 100) ;
+}
