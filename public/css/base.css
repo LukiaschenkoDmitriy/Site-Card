@@ -11,12 +11,35 @@
 
 .container {
     display: flex;
-    width: 80%;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
 .body {
     display: flex;
     justify-content: center;
+}
+
+@media screen and (min-width:1000px) {
+    .container {
+        width: 1000px; 
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .container {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container {
+        width: 300px;
+    }
 }

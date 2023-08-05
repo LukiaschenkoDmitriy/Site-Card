@@ -1,5 +1,4 @@
-.index_container {
-    display: flex;
+.index_about_me_container {
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -7,56 +6,196 @@
     padding-top: 100px;
 }
 
-.index_container>img {
+.index_about_me {
+    height: 520px;
+}
+
+.index_title {
+    text-decoration: none;
+    transition: color .5s ease;
+}
+
+.index_about_me>div>div {
+    margin-top: 10px;
+}
+
+.index_about_me>div>div>a {
+    text-decoration: none;
+    margin-top: 2px;
+    padding: 5px;
+    transition: color .5s ease;
+}
+
+.index_button {
+    text-decoration: none;
+    border: 2px solid rgba(128, 128, 128, 100);
+    border-radius: 5px;
+    transition: color 1s ease;
+    transition: border 1s ease;
+    -webkit-transition: background-color 1s;
+}   
+
+.index_about_me_container>img {
     width: 450px;
     height: 500px;
     background-color: rgb(207, 207, 207);
 }
 
-.index_about_me {
-    width: 450px;
-    height: 500px;
-    margin-left: 150px;
-    text-align: center;
-}
-
-.index_about_me_title {
-    font-size: 35px;
-    text-decoration: none;
-    transition: color .5s ease;
-}
-
-.index_about_me_title:hover {
+.index_title:hover {
     color: rgb(0, 0, 0);
 }
 
-.index_about_me>p {
-    font-size: 20px;
-    margin: 20px 0px;
-}
-
-.index_about_me>div>a {
-    display: block;
-    font-size: 19px;
-    text-decoration: none;
-    margin-top: 2px;
-    transition: color .5s ease;
-}
-
-.index_about_me>div>a:hover {
+.index_about_me>div>div>a:hover {
     color: black;
 }
 
-.index_more_button {
-    font-size: 20px;
-    text-decoration: none;
-    transition: color .5s ease;
-    transition: border .5s ease;
-    border-bottom: 3px solid rgba(128, 128, 128, 0) ;
-    padding: 5px;
+.index_button:hover {
+    color: white;
+    background-color: rgb(54, 54, 54);
+    border-color: white;
 }
 
-.index_more_button:hover {
-    color: black;
-    border-bottom: 3px solid rgba(128, 128, 128, 100) ;
+@media screen and (min-width:1000px) {
+    .index_about_me_container {
+        display: flex;
+    }
+
+    .index_title {
+        font-size: 35px;
+    }
+
+    .index_about_me {
+        width: 450px;
+        margin-left: 120px; 
+    }
+
+    .index_about_me>p {
+        font-size: 22px;
+        margin: 35px 0px;
+    }
+
+    .index_about_me>div>div>a {
+        font-size: 21px;
+    }
+
+    .index_button {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    #index_last_p {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .index_about_me_container {
+        display: flex;
+    }
+
+    .index_title {
+        font-size: 30px;
+    }
+
+    .index_about_me {
+        width: 300px;
+        margin-left: 20px; 
+    }
+
+    .index_about_me>p {
+        font-size: 17px;
+        margin: 22px 0px;
+    }
+
+    .index_about_me>div>div>a {
+        font-size: 19px;
+    }
+
+    .index_button {
+        font-size: 19px;
+        padding: 10px 15px;
+    } 
+
+    #index_last_p {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .index_about_me_container {
+        display: block;
+    }
+
+    .index_about_me_container>img {
+        min-width: 350px;
+        min-height: 400px;
+        margin-bottom: 50px;
+        margin-left: 20px;
+    }
+
+    .index_title {
+        font-size: 30px;
+    }
+
+    .index_about_me {
+        width: 350px;
+    }
+
+    .index_about_me>p {
+        font-size: 19px;
+        margin: 22px 0px;
+    }
+
+    .index_about_me>div>div>a {
+        font-size: 19px;
+    }
+
+    .index_button {
+        font-size: 19px;
+        padding: 10px 15px;
+    } 
+
+    #index_last_p {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .index_about_me_container {
+        display: block;
+    }
+
+    .index_about_me_container>img {
+        min-width: 300px;
+        min-height: 350px;
+        margin-bottom: 50px;
+        margin-left: 0px;
+    }
+
+    .index_title {
+        font-size: 30px;
+    }
+
+    .index_about_me {
+        width: 300px;
+        margin: 0px;
+    }
+
+    .index_about_me>p {
+        font-size: 19px;
+        margin: 22px 0px;
+    }
+
+    .index_about_me>div>div>a {
+        font-size: 19px;
+    }
+
+    .index_button {
+        font-size: 19px;
+        padding: 10px 15px;
+    } 
+
+    #index_last_p {
+        margin-bottom: 40px;
+    }
 }
