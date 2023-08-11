@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Remove projects{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/db/project/remove.css')}}">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% endblock %}
+
+
+{% block javascripts %}
+<script src="{{asset('js/jquery.js')}}"></script>
+<script src="{{asset('js/project.js')}}"></script>
+{% endblock %}
+
+{% block body %}
+<form name="project" method="post" action="/db/project/remove">
+    {% if error_message is defined%}
+        <div class="error_message">
+            <p>{{error_message}}</p>
+        </div>
+    {% endif %}
+    {% if sucsess_delete is defined%}
+        {% for project in projects %}
+            <div class="information">
+                    <p>Project {{project.name}} was deleted</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <h2>Remove projects in the database</h1>
+    <h3>Select the criterion by which you want to delete the projects</h2>
+    <div id="project">
+        <div>
+            <div class="checkbox_container">
+                <label for="project_id_checkbox" class="required">Project id</label>
+                <input type="checkbox" id="project_id_checkbox">
+            </div>
+            <div class="checkbox_container">
+                <label for="project_name_checkbox" class="required">Project name</label>
+                <input type="checkbox" id="project_name_checkbox">
+            </div>
+            <div class="checkbox_container">
+                <label for="project_language_checkbox" class="required">Project language</label>
+                <input type="checkbox" id="project_language_checkbox">
+            </div>
+            <div class="checkbox_container">
+                <label for="project_gitPath_checkbox" class="required">Project git path</label>
+                <input type="checkbox" id="project_gitPath_checkbox">
+            </div>
+            <div class="checkbox_container">
+                <label for="project_description_checkbox" class="required">Project description</label>
+                <input type="checkbox" id="project_description_checkbox">
+            </div>
+        </div>
+        <div>
+            <div class="project_container project_id">
+                <label for="project_id" class="required">ID:</label>
+                <br>
+                <input type="text" class="form-control" disabled id="project_id" name="project[id]" placeholder="1" required="required">
+            </div>
+            <div class="project_container project_name">
+                <label for="project_name" class="required">Name:</label>
+                <br>
+                <input type="text" class="form-control" disabled id="project_name" name="project[name]" placeholder="Java-Clock" required="required">
+            </div>
+            <div class="project_container project_language">
+                <label for="project_language" class="required">Language:</label>
+                <br>
+                <input type="text" class="form-control" disabled id="project_language" name="project[language]" placeholder="Java" required="required">
+            </div>
+            <div class="project_container project_git_path">
+                <label for="project_gitPath" class="required">Git path:</label>
+                <br>
+                <input type="text" class="form-control" disabled id="project_gitPath" name="project[gitPath]" placeholder="https://github.com/mohitsainiknl/Java-Clock" required="required">
+            </div>
+            <div class="project_container project_description">
+                <label for="project_description" class="required">Description</label>
+                <br>
+                <input type="text" class="form-control" disabled id="project_description" name="project[description]" placeholder="Java-Clock is a project of an Analog Clock. This clock has transparent backgound (or we can say transparent JFrame), which is achieved with setUndecorated and setOpaque methods set to the JFrame and its component. Moreover a new title bar is created with a responsive close JButton. All these will help new Java learner to make a custom JFrame." required="required">
+            </div>
+            <div class="project_container project_saver" class="">
+                <button type="submit" class="form-control" id="project_save">Remove projects</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

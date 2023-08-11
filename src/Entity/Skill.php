@@ -20,7 +20,7 @@ class Skill
     private ?string $duration = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $projects_language = null;
+    private ?string $projectLanguage = null;
 
     #[ORM\Column]
     private ?int $rate = null;
@@ -56,12 +56,12 @@ class Skill
 
     public function getProjectsLanguage(): ?string
     {
-        return $this->projects_language;
+        return $this->projectLanguage;
     }
 
-    public function setProjectsLanguage(string $projects_language): static
+    public function setProjectsLanguage(string $projectLanguage): static
     {
-        $this->projects_language = $projects_language;
+        $this->projectLanguage = $projectLanguage;
 
         return $this;
     }

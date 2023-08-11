@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add a new project{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/db/project/add.css')}}">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+    <form name="project" method="post" action="/db/project/add">
+        <div id="project">
+            {% if error_message is defined%}
+                <div class="error_message">
+                    <p>{{error_message}}</p>
+                </div>
+            {% endif %}
+            {% if post.project is defined%}
+                <div class="information">
+                    <p>A project called {{project.name}} was added to the database</p>
+                </div>
+            {% endif %}
+            <h1>Add a new project in the database</h1>
+            <div>
+                <label for="project_name" class="required">Name:</label>
+                <br>
+                <input type="text" class="form-control" id="project_name" name="project[name]" placeholder="Java-Clock" required="required">
+            </div>
+            <div>
+                <label for="project_language" class="required">Language:</label>
+                <br>
+                <input type="text" class="form-control" id="project_language" name="project[language]" placeholder="Java" required="required">
+            </div>
+            <div>
+                <label for="project_gitPath" class="required">Git path:</label>
+                <br>
+                <input type="text" class="form-control" id="project_gitPath" name="project[gitPath]" placeholder="https://github.com/mohitsainiknl/Java-Clock" required="required">
+            </div>
+            <div>
+                <label for="project_description" class="required">Description</label>
+                <br>
+                <input type="text" class="form-control" id="project_description" name="project[description]" placeholder="Java-Clock is a project of an Analog Clock. This clock has transparent backgound (or we can say transparent JFrame), which is achieved with setUndecorated and setOpaque methods set to the JFrame and its component. Moreover a new title bar is created with a responsive close JButton. All these will help new Java learner to make a custom JFrame." required="required">
+            </div>
+            <div>
+                <button type="submit" class="form-control" id="project_save">Save project</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

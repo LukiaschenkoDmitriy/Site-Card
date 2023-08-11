@@ -1,0 +1,65 @@
+.checkbox_container>label {
+    width:150px;
+}
+
+.checkbox_container {
+    text-align: center;
+}
+
+form {
+    margin-top: 50px;
+    width: 100%;;
+}
+
+#project>h1 {
+    margin-bottom: 20px;
+}
+
+#project>div {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#project>div>div>label {
+    margin-top: 10px;
+}
+
+#project>div>div>input {
+    width:500px;
+}
+
+#project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#project>div {
+    margin-right: 100px;
+}
+
+.information {
+    margin-top: 20px;
+    height:50px;
+    text-align: center;
+    background-color: rgba(21, 158, 101, 0.705);
+    border-radius: 10px;
+}
+
+.information>p {
+    padding-top: 10px;
+    color:white;
+}
+
+.error_message {
+    text-align: center;
+    margin-top: 20px;
+    height:50px;
+    background-color: rgba(158, 21, 21, 0.705);
+    border-radius: 10px;
+}
+
+.error_message>p {
+    padding-top: 10px;
+    color:white;
+}
