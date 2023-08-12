@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Remove skill{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/db/skill/remove.css')}}">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% endblock %}
+
+
+{% block javascripts %}
+<script src="{{asset('js/jquery.js')}}"></script>
+<script src="{{asset('js/skill.js')}}"></script>
+{% endblock %}
+
+{% block body %}
+<form name="skill" method="post" action="/db/skill/remove">
+    {% if error_message is defined%}
+        <div class="error_message">
+            <p>{{error_message}}</p>
+        </div>
+    {% endif %}
+    {% if sucsess_delete is defined%}
+        {% for skill in skills %}
+            <div class="information">
+                    <p>Skill {{skill.name}} was deleted</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <h2>Remove skills in the database</h1>
+    <h3>Select the criterion by which you want to delete the skills</h2>
+    <div id="skill">
+        <div>
+            <div class="checkbox_container">
+                <label for="skill_id_checkbox" class="required">ID</label>
+                <input type="checkbox" id="skill_id_checkbox">
+            </div>
+            <div class="checkbox_container">
+                <label for="skill_name_checkbox" class="required">Name</label>
+                <input type="checkbox" id="skill_name_checkbox">
+            </div>
+            <div class="checkbox_container">
+                <label for="skill_duration_checkbox" class="required">Duration</label>
+                <input type="checkbox" id="skill_duration_checkbox">
+            </div>
+            <div class="checkbox_container">
+                <label for="skill_project_language_checkbox" class="required">Project language</label>
+                <input type="checkbox" id="skill_project_language_checkbox">
+            </div>
+            <div class="checkbox_container">
+                <label for="skill_rate_checkbox" class="required">Rate</label>
+                <input type="checkbox" id="skill_rate_checkbox">
+            </div>
+        </div>
+        <div>
+            <div class="skill_container skill_id">
+                <label for="skill_id" class="required">ID:</label>
+                <br>
+                <input type="text" class="form-control" disabled id="skill_id" name="skill[id]" placeholder="1" required="required">
+            </div>
+            <div class="skill_container skill_name">
+                <label for="skill_name" class="required">Name:</label>
+                <br>
+                <input type="text" class="form-control" disabled id="skill_name" name="skill[name]" placeholder="Java Language" required="required">
+            </div>
+            <div class="skill_container skill_duration">
+                <label for="skill_duration" class="required">Duration:</label>
+                <br>
+                <input type="text" class="form-control" disabled id="skill_duration" name="skill[duration]" placeholder="3 years" required="required">
+            </div>
+            <div class="skill_container skill_project_languages">
+                <label for="skill_project_languages" class="required">Project language:</label>
+                <br>
+                <input type="number" class="form-control" disabled id="skill_project_languages" name="skill[projectLanguage]" placeholder="Java, PHP, Python" required="required">
+            </div>
+            <div class="skill_container skill_rate">
+                <label for="skill_rate" class="required">Rate</label>
+                <br>
+                <input type="number" class="form-control" disabled id="skill_rate" name="skill[rate]" placeholder="3.5" required="required">
+            </div>
+            <div class="skill_container skill_saver" class="">
+                <button type="submit" class="form-control" id="project_save">Remove skill</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

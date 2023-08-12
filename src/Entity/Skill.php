@@ -54,12 +54,12 @@ class Skill
         return $this;
     }
 
-    public function getProjectsLanguage(): ?string
+    public function getprojectLanguage(): ?string
     {
         return $this->projectLanguage;
     }
 
-    public function setProjectsLanguage(string $projectLanguage): static
+    public function setprojectLanguage(string $projectLanguage): static
     {
         $this->projectLanguage = $projectLanguage;
 

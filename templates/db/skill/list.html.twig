@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All skills in database{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/db/skill/list.css')}}">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+    <div class="list_container">
+       <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Language project</th>
+                    <th scope="col">Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for skill in skills %}
+                    <tr>
+                        <th scope="row">{{skill.id}}</th>
+                        <td>{{skill.name}}</td>
+                        <td>{{skill.duration}}</td>
+                        <td>{{skill.projectLanguage}}</td>
+                        <td>{{skill.rate}}</td>
+                    </tr>    
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
