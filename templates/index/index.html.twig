@@ -5,59 +5,57 @@
 {% endblock %}
 
 {% block body %}
-    <div>
-        <div class="index_about_me_container">
-            <img src="" alt="My photo">
-            <div class="index_about_me">
-                <a href="" class="index_title"># About me</a>
-                <p>
-                    Hello! My name is Dmytrii Lukiashchenko.
-                    I am 18 years old. I am from Ukraine.
-                    I have been in the field of programming for 4 years.
-                    I know the syntax of languages such as:
-                </p>
+    <div class="index_about_me_container">
+        <img src="" alt="My photo">
+        <div class="index_about_me">
+            <a href="" class="paragraph_title index_about_me_unit"># About me</a>
+            <p class="index_about_me_unit">
+                Hello! My name is Dmytrii Lukiashchenko.
+                I am 18 years old. I am from Ukraine.
+                I have been in the field of programming for 4 years.
+                I know the syntax of languages such as:
+            </p>
+            <div class="index_about_me_unit">
                 <div>
-                    <div>
-                        <a href="">"Python"</a>
-                        <a href="">"JavaScript"</a>
-                        <a href="">"HTML"</a>
+                    <a href="">"Python"</a>
+                    <a href="">"JavaScript"</a>
+                    <a href="">"HTML"</a>
+                </div>
+                <div>
+                    <a href="">"CSS"</a>
+                    <a href="">"C#"</a>
+                    <a href="">"Java"</a>
+                    <a href="">"PHP"</a>
+                </div>
+            </div>
+            <p class="index_about_me_unit">
+                and a couple of libraries for them. 
+                I intend to continue to deepen my knowledge and find my favorite language, 
+                which is currently "PHP".
+            </p>
+            <a href="" class="index_button index_about_me_unit">More about me</a>
+        </div>
+    </div>
+    <div class="index_skills_container">
+        <a href="" class="paragraph_title"># Skills</a>
+        <div class="index_skills">
+            {% for skill in skills %}
+                <div class="index_skill">
+                    <p class="index_skill_name">{{skill.name}}</p>
+                    <p class="index_skill_duration">{{skill.duration}}</p>
+                    <div class="index_skill_projects">
+                        <p></p>
                     </div>
-                    <div>
-                        <a href="">"CSS"</a>
-                        <a href="">"C#"</a>
-                        <a href="">"Java"</a>
-                        <a href="">"PHP"</a>
+                    <div class="index_skill_rate">
+                        {% for i in range(0, skill.rate) %}
+                            <div class="index_skill_rate_unit"></div>
+                        {% endfor %}
+                        {% for i in range(0, 5 - skill.rate) %}
+                        <div class="index_skill_rate_unit_empty"></div>
+                        {% endfor %}
                     </div>
                 </div>
-                <p id="index_last_p">
-                    and a couple of libraries for them. 
-                    I intend to continue to deepen my knowledge and find my favorite language, 
-                    which is currently "PHP".
-                </p>
-                <a href="" class="index_button">More about me</a>
-            </div>
-        </div>
-        <div class="index_skills_container">
-            <a href="" class="index_title"># Skills</a>
-            <div class="index_skills">
-                {% for skill in skills %}
-                    <div class="index_skill">
-                        <p class="index_skill_name">{{skill.name}}</p>
-                        <p class="index_skill_duration">{{skill.duration}}</p>
-                        <div class="index_skill_projects">
-                            <p></p>
-                        </div>
-                        <div class="index_skill_rate">
-                            {% for i in range(0, skill.rate) %}
-                                <div class="index_skill_rate_unit"></div>
-                            {% endfor %}
-                            {% for i in range(0, 5 - skill.rate) %}
-                            <div class="index_skill_rate_unit_empty"></div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
