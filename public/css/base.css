@@ -1,45 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
+:root {
+    --button-color: rgb(105,105,105);
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
     font-size: 17px;
-    color: rgb(105, 105, 105);
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.body {
-    display: flex;
-    justify-content: center;
-}
-
-@media screen and (min-width:1000px) {
-    .container {
-        width: 1000px; 
-    }
-}
-
-@media screen and (max-width:1000px) {
-    .container {
-        width: 600px;
-    }
-}
-
-@media screen and (max-width:600px) {
-    .container {
-        width: 400px;
-    }
-}
-
-@media screen and (max-width:400px) {
-    .container {
-        width: 300px;
-    }
+    color: var(--button-color);
 }

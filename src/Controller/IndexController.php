@@ -16,6 +16,6 @@ class IndexController extends AbstractController
     {
         $skills = $entityManagerInterface->getRepository(Skill::class)->findAll();
 
-        return $this->render("/index/index.html.twig", ['skills' => $skills]);
+        return $this->render("index/index.html.twig", ['skills' => $skills]);
     }
 }
