@@ -16,8 +16,13 @@
 }
 
 .index_about_me_unit>div>a {
+    text-decoration: none;
     font-size: 135%;
     margin-left: 10px;
+}
+
+.index_about_me_unit>div>a:hover {
+    text-decoration:underline;
 }
 
 .index_button {
@@ -28,7 +33,7 @@
 }
 
 .index_button:hover {
-    background-color: rgb(230, 230, 230);
+    text-decoration:underline;
 }
 
 .paragraph_title {
@@ -44,33 +49,41 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .index_about_me_container {
-        grid-template-columns: 400px;
+        grid-template-columns: 100%;
     }
 
     .index_about_me_container>img {
         margin-right: 0px;
+    }
+
+    .index_about_me {
+        margin-top: 20px;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 600px) {
     .index_about_me_container {
-        grid-template-columns: 600px;
+        grid-template-columns: 100%;
     }
 
     .index_about_me_container>img {
         margin-right: 0px;
+    }
+
+    .index_about_me {
+        margin-top: 20px;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .index_about_me_container {
-        grid-template-columns: 768px;
+        grid-template-columns: 50% 50%;
     }
 
     .index_about_me_container>img {
-        margin-right: 0px;
+        margin-right: 40px;
     }
 }
 
