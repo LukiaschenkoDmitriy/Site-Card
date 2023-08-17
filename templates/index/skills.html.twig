@@ -1,0 +1,22 @@
+<div class="index_skills_container">
+        <a href="" class="paragraph_title"># Skills</a>
+        <div class="index_skills">
+            {% for skill in skills %}
+                <div class="index_skill">
+                    <p class="index_skill_name">{{skill.name}}</p>
+                    <p class="index_skill_duration">{{skill.duration}}</p>
+                    <div class="index_skill_projects">
+                        <p></p>
+                    </div>
+                    <div class="index_skill_rate">
+                        {% for i in range(0, skill.rate) %}
+                            <div class="index_skill_rate_unit"></div>
+                        {% endfor %}
+                        {% for i in range(0, 5 - skill.rate) %}
+                        <div class="index_skill_rate_unit_empty"></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>

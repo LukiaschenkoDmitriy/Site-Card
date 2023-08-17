@@ -3,7 +3,8 @@
     --head-btn-hover: rgba(133,133,133,255);
 }
 
-.header {
+.header_container {
+    width:100%;
     position: fixed;
     align-items: center;
     padding: 0px 20px;

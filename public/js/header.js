@@ -9,4 +9,5 @@ function maxWidth(x) {
     $(".sub_head_container_nav").css('display', 'none');
 }
 
-x.addListener(window.matchMedia("(max-width: 600px)"))
+var x = window.matchMedia("(max-width: 600px)");
+x.addListener(maxWidth);
