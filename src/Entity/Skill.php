@@ -22,6 +22,9 @@ class Skill
     #[ORM\Column(length: 255)]
     private ?string $projectLanguage = null;
 
+    #[ORM\Column(length: 10000)]
+    private ?string $description = null;
+
     #[ORM\Column]
     private ?int $rate = null;
 
@@ -77,4 +80,20 @@ class Skill
 
         return $this;
     }
+
+	/**
+	 * @return 
+	 */
+	public function getDescription(): ?string {
+		return $this->description;
+	}
+	
+	/**
+	 * @param  $description 
+	 * @return self
+	 */
+	public function setDescription(?string $description): static {
+		$this->description = $description;
+		return $this;
+	}
 }
