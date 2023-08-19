@@ -58,8 +58,8 @@
                                 <div class="skill-projects skill-desc">
                                     <div>
                                         {% for project in projects %}
-                                            {% if skill.projectLanguage ==  project.language %}
-                                                <div><a href="">"{{project.name}}"</a></div>
+                                            {% if skill.project_language ==  project.language %}
+                                                <div><a href="{{project.git_path}}">"{{project.name}}"</a></div>
                                             {% endif %}
                                         {% endfor %}
                                     </div>
@@ -73,7 +73,7 @@
                         <div class="skill-description-container">
                             <div class="skill-description-int skill-int">Description</div>
                             <div class="skill-description skill-desc">
-                                
+                                {{skill.description}}
                             </div>
                         </div>
                         <a href="" class="skill-more-button">

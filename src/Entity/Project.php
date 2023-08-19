@@ -16,7 +16,7 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $language = null;
     #[ORM\Column(length: 255)]
-    private ?string $gitPath = null;
+    private ?string $git_path = null;
     #[ORM\Column(length:10000)]
     private ?string $description = null;
 
@@ -31,18 +31,6 @@ class Project
     public function getLanguage(): ?string
     {
         return $this->language;
-    }
-
-    public function getGitPath(): ?string
-    {
-        return $this->gitPath;
-    }
-
-    public function setGitPath(?string $gitpath): static
-    {
-        $this->gitPath = $gitpath;
-        
-        return $this;
     }
 
     public function setLanguage(string $language): static
@@ -77,6 +65,22 @@ class Project
 	 */
 	public function setDescription(?string $description): static {
 		$this->description = $description;
+		return $this;
+	}
+
+	/**
+	 * @return 
+	 */
+	public function getGit_path(): ?string {
+		return $this->git_path;
+	}
+	
+	/**
+	 * @param  $git_path 
+	 * @return self
+	 */
+	public function setGit_path(?string $git_path): static {
+		$this->git_path = $git_path;
 		return $this;
 	}
 }

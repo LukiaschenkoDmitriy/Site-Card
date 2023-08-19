@@ -20,13 +20,13 @@ class Skill
     private ?string $duration = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $projectLanguage = null;
+    private ?string $project_language = null;
 
     #[ORM\Column(length: 10000)]
     private ?string $description = null;
 
     #[ORM\Column]
-    private ?int $rate = null;
+    private ?float $rate = null;
 
     public function getId(): ?int
     {
@@ -57,24 +57,12 @@ class Skill
         return $this;
     }
 
-    public function getprojectLanguage(): ?string
-    {
-        return $this->projectLanguage;
-    }
-
-    public function setprojectLanguage(string $projectLanguage): static
-    {
-        $this->projectLanguage = $projectLanguage;
-
-        return $this;
-    }
-
-    public function getRate(): ?int
+    public function getRate(): ?float
     {
         return $this->rate;
     }
 
-    public function setRate(int $rate): static
+    public function setRate(float $rate): static
     {
         $this->rate = $rate;
 
@@ -94,6 +82,22 @@ class Skill
 	 */
 	public function setDescription(?string $description): static {
 		$this->description = $description;
+		return $this;
+	}
+
+	/**
+	 * @return 
+	 */
+	public function getProject_language(): ?string {
+		return $this->project_language;
+	}
+	
+	/**
+	 * @param  $project_language 
+	 * @return self
+	 */
+	public function setProject_language(?string $project_language): static {
+		$this->project_language = $project_language;
 		return $this;
 	}
 }
