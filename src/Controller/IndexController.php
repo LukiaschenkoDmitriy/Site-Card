@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Language;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Project;
 use App\Entity\Skill;
@@ -16,7 +17,12 @@ class IndexController extends AbstractController
     {
         $skills = $entityManagerInterface->getRepository(Skill::class)->findAll();
         $projects = $entityManagerInterface->getRepository(Project::class)->findAll();
+        $languages = $entityManagerInterface->getRepository(Language::class)->findAll();
 
-        return $this->render("index/index.html.twig", ['skills' => $skills, 'projects' => $projects]);
+        return $this->render("index/index.html.twig", [
+            'skills' => $skills, 
+            'projects' => $projects,
+            "languages" => $languages
+        ]);
     }
 }

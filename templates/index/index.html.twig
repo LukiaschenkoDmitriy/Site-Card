@@ -34,7 +34,6 @@
                     I intend to continue to deepen my knowledge and find my favorite language, 
                     which is currently "PHP".
                 </p>
-                <a href="" class="index_button index_about_me_unit">More about me</a>
             </div>
         </div>
     </div>
@@ -67,7 +66,7 @@
                             </div>
                             <div class="skill-rate-container">
                                 <div class="skill-rate-int skill-int">Rate</div>
-                                <div class="skill-rate skill-desc">{{skill.rate}}/5</div>
+                                <div class="skill-rate skill-desc">{{skill.rate}}/10</div>
                             </div>
                         </div>
                         <div class="skill-description-container">
@@ -76,12 +75,32 @@
                                 {{skill.description}}
                             </div>
                         </div>
-                        <a href="" class="skill-more-button">
-                            More
-                        </a>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="index_language_container">
+            <a href="" class="paragraph_title"># Languages</a>
+            <div class="languages">
+                {% for language in languages %}
+                    <div class="language">
+                        <div class="language-container">
+                            <div class="language-name-container">
+                                <div class="language-name-int language-int">Language</div>
+                                <div class="language-name language-desc">{{language.name}}</div>
+                            </div>
+                            <div class="language-rate-container">
+                                <div class="language-rate-int language-int">Rate</div>
+                                <div class="language-rate language-desc">{{language.rate}}/10</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% include "contact.html.twig" %}
 {% endblock %}
