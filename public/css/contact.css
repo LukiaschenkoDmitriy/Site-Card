@@ -1,0 +1,19 @@
+.conctact-container {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 100%;
+    height:200px;
+}
+
+.wrapp-conctact-container {
+    padding: 50px;
+    margin-top: 200px;
+    background-color: rgb(231, 231, 231);
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+
