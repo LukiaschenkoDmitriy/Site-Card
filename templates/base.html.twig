@@ -11,9 +11,10 @@
     <body>
         {% include "header.html.twig" %}
         {% block body %}{% endblock %}
+        {% include "contact.html.twig" %}
     </body>
 
-    {% block javascripts %}{% endblock %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    {% block javascripts %}{% endblock %}
     {{ encore_entry_script_tags('base') }}
 </html>

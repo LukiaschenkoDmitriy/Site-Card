@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
+$deviceSizes: 768px, 600px, 992px, 1200px;
+
 .container {
     display: flex;
     justify-content: center;

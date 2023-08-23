@@ -1,0 +1,39 @@
+<div class="home">    
+    <div class="container">
+        <div class="home-container">
+            <div class="home-describe">
+                <div class="describe">
+                    <h1>Hello</h1>
+                    <h1>My name is <span class="home-name">Dmytrii</span></h1>
+                    <h1>I am a <span class="typewriter"></span> developer</h1>
+                </div>
+                <div class="code-blocks">
+                    <pre class="php-code">
+                        <code>
+public function removeProject(int $id): bool {
+    $project = $this-> entityManagerInterface
+        -> getRepository(Project::class)->find($id);
+
+    if (!$project) {
+        $this->loggerInterface
+            ->error("No project found for id ".$id);
+        return false;
+    }
+
+    $this->entityManagerInterface->remove($project);
+    $this->entityManagerInterface->flush();
+    return true;
+}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="custom-shape-divider-bottom-1692790058">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
+        </svg>
+    </div>
+</div>
