@@ -1,30 +1,74 @@
-:root {
-    --dark-color: #011627;
-    --blue-color: #1B998B;
-    --red-color: #EF5B5B;
-    --white-color: #FFFFF2;
-}
+@use "colors.scss";
 
 .header_container {
     width:100%;
     position: fixed;
     align-items: center;
     padding: 0px 20px;
-    background-color: var(--dark-color);
+    background-color: colors.$dark-color;
+}
+
+.text {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    top: -30px;
+    position: relative;
 }
 
 .head_button {
+    $width: 140px;
+    $height: 60px;
+
     font-size: 100%;
-    padding: 11px 10px;
+
     text-decoration: none;
-    color: var(--white-color);
+    color: colors.$white-color;
 
-    border-bottom: 3px solid var(--dark-color);
-    transition: border-color .5s ease;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.head_button:hover {
-    border-color: var(--red-color);
+    cursor: pointer;
+
+    &:hover {
+        svg rect {
+            $delta: $width / 4;
+            $newWidth: $width - $delta * 2;
+
+            stroke-width: 2px;
+            stroke-dasharray: $newWidth 600;
+            stroke-opacity: 100;
+            stroke-dashoffset: -$width - $height - $delta;
+        }
+    }
+
+    svg {
+        width: $width;
+        height: $height;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    svg rect {
+        width: $width;
+        height: $height;
+
+        stroke-dasharray: $width 600;
+        stroke-dashoffset: -$width - $height;
+        stroke-width: 8px;
+        stroke-opacity: 0;
+        stroke-linecap: round;
+        fill: transparent;
+        stroke: #19f6e8;
+        border-bottom: 5px solid black;
+        transition: stroke-opacity 1s, stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
 }
 
 .portf_button {

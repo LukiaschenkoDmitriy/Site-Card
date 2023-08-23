@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
-:root {
-    --button-color: rgb(105,105,105);
-}
-
 .container {
     display: flex;
     justify-content: center;
@@ -15,5 +11,4 @@
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
     font-size: 17px;
-    color: var(--button-color);
 }
