@@ -66,8 +66,7 @@
         stroke-opacity: 0;
         stroke-linecap: round;
         fill: transparent;
-        stroke: #19f6e8;
-        border-bottom: 5px solid black;
+        stroke: colors.$w-blue-color;
         transition: stroke-opacity 1s, stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
     }
 }
@@ -140,24 +139,12 @@
     }
 }
 
+$windowSizes: 768px, 992px, 1200px;
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .header {
-        width:768px;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .header {
-        width:992px;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .header {
-        width:1200px;
+@each $size in $windowSizes {
+    @media only screen and (min-width: $size) {
+        .header {
+            width:$size;
+        }
     }
 }
