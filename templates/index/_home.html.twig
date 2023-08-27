@@ -9,7 +9,7 @@
                 </div>
                 <div class="code-blocks">
                     <pre class="php-code">
-                        <code>
+                        <code class="language-php">
 public function removeProject(int $id): bool {
     $project = $this-> entityManagerInterface
         -> getRepository(Project::class)->find($id);
@@ -32,3 +32,12 @@ public function removeProject(int $id): bool {
         </div>
     </div>
 </div>
+<script>
+    hljs.highlightAll()
+    new TypeIt('.php-code code', {
+        speed: 50,
+        waitUntilVisible: true
+    }).go().pause(1000).exec(function() {
+        hljs.highlightAll();
+    });
+</script>

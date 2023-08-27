@@ -1,43 +1,55 @@
-<div class="container">
-    <div class="index_skills_container">
-        <a href="" class="paragraph_title"># Skills</a>
-        <div class="skills">
-            {% for skill in skills %}
-                <div class="skill">
-                    <div class="skill-container">
-                        <div class="skill-name-container">
-                            <div class="skill-name-int skill-int">Name</div>
-                            <div class="skill-name skill-desc">{{skill.name}}</div>
+<div class="skills-container">
+    <div class="skills">
+        {% set i = 0 %}
+        {% for skill in skills %}
+            <div class="skill">
+                {% if i % 2 == 0 %}
+                    <div class="skill-subcontainer">
+                        <div class="skill-description">
+                            {{skill.base_description}}
                         </div>
-                        <div class="skill-duration-container">
-                            <div class="skill-duration-int skill-int">Duration</div>
-                            <div class="skill-duration skill-desc">{{skill.duration}}</div>
-                        </div>
-                        <div class="skill-projects-container">
-                            <div class="skill-projects-int skill-int">Projects</div>
-                            <div class="skill-projects skill-desc">
-                                <div>
-                                    {% for project in projects %}
-                                        {% if skill.project_language ==  project.language %}
-                                            <div><a href="{{project.git_path}}">"{{project.name}}"</a></div>
-                                        {% endif %}
-                                    {% endfor %}
-                                </div>
+                        <div class="skill-button-wrapp">
+                            <div class="skill-button">
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <rect></rect>
+                                </svg>
+                                Read more
                             </div>
                         </div>
-                        <div class="skill-rate-container">
-                            <div class="skill-rate-int skill-int">Rate</div>
-                            <div class="skill-rate skill-desc">{{skill.rate}}/10</div>
+                    </div>
+                    <div class="skill-code">
+                        <img src="{{skill.icon_path}}" alt="">
+                        <pre>
+                            <code class="{{skill.hljs_tag}}">
+                                {{skill.code}}
+                            </code>
+                        </pre>
+                    </div>
+                {% else %}
+                    <div class="skill-code">
+                        <img src="{{skill.icon_path}}" alt="">
+                        <pre>
+                            <code class="{{skill.hljs_tag}}">
+                                {{skill.code}}
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="skill-subcontainer">
+                        <div class="skill-description">
+                            {{skill.base_description}}
+                        </div>
+                        <div class="skill-button-wrapp">
+                            <div class="skill-button">
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <rect></rect>
+                                </svg>
+                                Read more
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-description-container">
-                        <div class="skill-description-int skill-int">Description</div>
-                        <div class="skill-description skill-desc">
-                            {{skill.description}}
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+                {% endif %}
+            </div>
+            {% set i = i + 1 %}
+        {% endfor %}
     </div>
 </div>

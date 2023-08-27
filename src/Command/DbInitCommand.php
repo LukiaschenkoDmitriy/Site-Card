@@ -18,8 +18,6 @@ class DbInitCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-
-
         $file = fopen($this->sqlFile, "r");
         $sqlQuery = fread($file, filesize($this->sqlFile));
         fclose($file);

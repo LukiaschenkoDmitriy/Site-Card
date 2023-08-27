@@ -6,21 +6,11 @@
 {% endblock %}
 
 {% block body %}
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+
     {% include "index/_home.html.twig" %}
     {% include "index/_about.html.twig" %}
     {% include "index/_skills.html.twig"%}
     {% include "index/_languages.html.twig" %}
-
-    {% block javascripts %}
-        <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
-        <script>
-            new TypeIt('.php-code code', {
-                speed: 50,
-                waitUntilVisible: true
-            }).go().pause(1000).exec(function() {
-                hljs.highlightAll();
-            });
-        </script>
-    {% endblock %}
 {% endblock %}

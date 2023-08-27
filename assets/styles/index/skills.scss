@@ -1,114 +1,111 @@
 @use "../colors";
 
-.index_skills_container {
+.skills-container {
+    .skills {
+        .skill {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: auto;
+            .skill-code {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                flex-wrap: nowrap;
+                align-items: center;
+
+                img {
+                    margin-top: 50px;
+                    width:100px;
+                    height:100px;
+                }
+
+                pre {
+                    width:470px;
+                    border-radius: 5px;
+                    overflow: auto;
+                    max-width: 500px;
+                    white-space: pre-wrap;
+                    font-family: Courier, monospace;
+                    font-size: 16px;
+                    animation: fadeIn 2s ease forwards;
+
+                    code {
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.skill-subcontainer {
+    color:white;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: colors.$dark-color;
+
+    .skill-description {
+        font-size: 150%;
+        width:480px;
+    }
+}
+
+.skill-button-wrapp {
     margin-top: 70px;
-    width:1000px;
-}
-
-.skill {
-    display: grid;
-    column-gap: 20px;
-    margin: 30px 0px;
-}
-
-.skill-container>div,
-.skill-description-container {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-auto-rows: auto;
-    align-items: center;
-}
-
-.skill-more-button {
-    margin-top: 20px;
-    display: flex;
-    grid-column: span 4;
+    width:100%;
+    display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    text-decoration: none;
-    color: colors.$red-color;
+    .skill-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        $width: 150px;
+        $height: 50px;
 
-    border: 2px solid colors.$blue-color;
-    padding: 10px 0px;
-    margin-bottom: 20px;
+        width:$width;
+        height:$height;
+        position: relative;
 
-    transition: color .5s ease;
-}
+        color: colors.$white-color;
 
-.skill-more-button:hover {
-    color: colors.$white-color;
-}
+        cursor: pointer;
 
-.skill-int {
-    padding: 10px;
-    display: flex;
-    height:100%;
-    justify-content: center;
-    align-items: center;
-    background-color: colors.$white-color;
-}
+        &:hover {
+            svg {
+                rect {
+                    stroke-dasharray: 100%;
+                    stroke-dashoffset: -$width - $height + $width;
+                    stroke-width: 4px;
+                }
+            }
+        }
 
-.skill-desc {
-    display: flex;
-    height:100%;
-    justify-content: center;
-    align-items: center;
-    background-color: colors.$white-color;
-}
+        svg {
+            position: absolute;
+            width:$width;
+            height:$height;
 
-.skill-description-int,
-.skill-description {
-    grid-row: span 4;
-}
+            rect {
+                width:$width;
+                height:$height;
 
-.skill-description {
-    padding: 20px;
-}
-
-.skill-projects>div>div {
-    margin: 10px 0px;
-}
-
-.skill-projects>div>div {
-    margin: 10px 0px;
-    text-align: center;
-}
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .skill {
-        grid-template-columns: 100%;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 600px) {
-    .skill {
-        grid-template-columns: 100%;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .skill {
-        grid-template-columns: 40% 60%;
-    }
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .skill {
-        grid-template-columns: 40% 60%;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .skill {
-        grid-template-columns: 40% 60%;
+                stroke-dasharray: $width 600;
+                stroke-dashoffset: -$width - $height;
+                stroke-width: 8px;
+                stroke-linecap: round;
+                fill: transparent;
+                stroke: colors.$white-color;
+                transition: stroke-opacity 1s, stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+            }
+        }
     }
 }

@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20230819183857 extends AbstractMigration
+final class Version20230827104236 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -20,12 +20,12 @@ final class Version20230819183857 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE skill CHANGE rate rate DOUBLE PRECISION NOT NULL');
+        $this->addSql('ALTER TABLE skill ADD hljs_tag VARCHAR(255) NOT NULL');
     }
 
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE skill CHANGE rate rate INT NOT NULL');
+        $this->addSql('ALTER TABLE skill DROP hljs_tag');
     }
 }

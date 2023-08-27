@@ -1,5 +1,18 @@
 @use "../colors";
 
+.chapter-title {
+    display: flex;
+    justify-content: left;
+    font-size: 180%;
+    text-decoration: none;
+    color: colors.$t-color;
+    transition: color .5s ease;
+
+    &:hover {
+        color: colors.$white-color;
+    }
+} 
+
 .index_about_me_container {
     display: grid;
     grid-template-rows: auto;
@@ -100,20 +113,7 @@
                 }
             }
         }
-    }
-
-    .paragraph_title {
-        display: flex;
-        justify-content: left;
-        font-size: 180%;
-        text-decoration: none;
-        color: colors.$t-color;
-        transition: color .5s ease;
-    
-        &:hover {
-            color: colors.$white-color;
-        }
-    }    
+    }   
 }
 
 /* Extra small devices (phones, 600px and down) */
