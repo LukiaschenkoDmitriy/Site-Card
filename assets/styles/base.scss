@@ -5,6 +5,7 @@ $deviceSizes: 768px, 600px, 992px, 1200px;
 .container {
     display: flex;
     justify-content: center;
+    z-index:50;
 }
 
 * {
