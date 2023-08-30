@@ -7,25 +7,8 @@
                     <h1>My name is <span class="home-name">Dmytrii</span></h1>
                     <h1>I am a <span class="typewriter"></span> developer</h1>
                 </div>
-                <div class="code-blocks">
-                    <pre class="php-code">
-                        <code class="language-php">
-public function removeProject(int $id): bool {
-    $project = $this-> entityManagerInterface
-        -> getRepository(Project::class)->find($id);
-
-    if (!$project) {
-        $this->loggerInterface
-            ->error("No project found for id ".$id);
-        return false;
-    }
-
-    $this->entityManagerInterface->remove($project);
-    $this->entityManagerInterface->flush();
-    return true;
-}
-                        </code>
-                    </pre>
+                <div class="img-grid-container">
+                    <img src="" alt="My photo">
                 </div>
             </div>
             </div>
