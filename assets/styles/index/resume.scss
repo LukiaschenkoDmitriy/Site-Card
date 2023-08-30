@@ -1,0 +1,81 @@
+@use "../colors";
+
+.resume-container {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    gap: 10px;
+
+    .resume-chapter {
+        display:grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        width:100%;
+    }
+
+    .resume-education {
+        grid-column: span 2;
+    }
+
+    .resume-rate {
+        position: relative;
+        height:6px;
+        background-color: colors.$red-color;
+        margin: 10px 0px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width:250px;
+            height:4px;
+            border: 1px solid colors.$red-color;
+        }
+    }
+
+    .resume-skill-description,
+    .resume-language-description {
+        width:400px;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .resume-skill,
+    .resume-language {
+        display:flex;
+        margin: 10px 0px;
+        width:400px;
+
+        .resume-name {
+            display: flex;
+            align-items: center;
+
+            font-size: 110%;
+            width:100px;
+            margin:0x;
+        }
+    }
+
+    .resume-education-description {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        .resume-education-school-title {
+            font-size: 110%;
+            width:100%;
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        .resume-education-school-description {
+            padding: 0px 100px;
+        }
+    }
+
+    .resume-title {
+        text-align: center;
+        font-size: 140%;
+        margin: 20px 0px;
+        color: rgb(61, 61, 61);
+    }
+}
