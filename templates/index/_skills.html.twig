@@ -1,10 +1,9 @@
 <div class="skills-container">
     <div class="skills">
-        {% set i = 0 %}
         {% set sliceMax = 2000 %}
         {% for skill in skills %}
+            <a href="" class="chapter-title">{{skill.name}}</a>
             <div class="skill">
-                {% if i % 2 == 0 %}
                     <div class="skill-subcontainer">
                         <ul class="background">
                             <li></li>
@@ -38,43 +37,7 @@
                             </code>
                         </pre>
                     </div>
-                {% else %}
-                    <div class="skill-code">
-                        <img src="{{skill.icon_path}}" alt="">
-                        <pre>
-                            <code class="{{skill.hljs_tag}}">
-                                {{skill.code|slice(0, sliceMax/2)}}
-                                .
-                                .
-                                .
-                            </code>
-                        </pre>
-                    </div>
-                    <div class="skill-subcontainer">
-                        <ul class="background">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <div class="skill-description">
-                            {{skill.base_description|slice(0, sliceMax)}}...
-                        </div>
-                        <div class="skill-button-wrapp">
-                            <div class="skill-button">
-                                <svg xmlns="http://www.w3.org/2000/svg">
-                                    <rect></rect>
-                                </svg>
-                                Read more
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
             </div>
-            {% set i = i + 1 %}
         {% endfor %}
     </div>
 </div>

@@ -15,5 +15,4 @@ function homeJavaScript() {
 
 window.onload = function() {
     homeJavaScript();
-    console.log("12312");
 };
