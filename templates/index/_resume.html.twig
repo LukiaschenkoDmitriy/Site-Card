@@ -1,0 +1,32 @@
+<div class="resume-container">
+    <a href="" class="chapter-title"># Resume</a>
+    <div class="resume-education">
+        <div class="resume-title">Education</div>
+        <div class="resume-description">
+            I completed my secondary education at Bohodukhivka NVK school in Ukraine with average grades in 2022.
+            I am currently studying at the Higher School of Enterprise and Administration as a programmer, 2nd year. 
+        </div>
+    </div>
+    <div class="resume-skills">
+        <div class="resume-title">Skills</div>
+        <div class="resume-description">
+            {% for skill in skills%}
+                <div class="resume-skill">
+                    <div class="resume-skill-name"></div>
+                    <div class="resume-skill-rate"></div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="resume-languages">
+        <div class="resume-title">Languages</div>
+        <div class="resume-description">
+            {% for language in languages %}
+                <div class="resume-language">
+                    <div class="resume-language-name"></div>
+                    <div class="resume-language-rate"></div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
