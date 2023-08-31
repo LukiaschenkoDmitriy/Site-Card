@@ -23,5 +23,5 @@ set rate = 3
 where name = "NodeJs";
 
 update skill
-set rate = 3
+set rate = 3m
 where name = "PHP";
