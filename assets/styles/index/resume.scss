@@ -27,7 +27,6 @@
 
 .resume-container {
     display:grid;
-    grid-template-columns: 50% 50%;
     grid-template-rows: auto auto;
     justify-items: center;
     gap: 10px;
@@ -38,10 +37,6 @@
         grid-template-columns: 100%;
         justify-items: center;
         width:100%;
-    }
-
-    .resume-education {
-        grid-column: span 2;
     }
 
     .resume-rate {
@@ -84,7 +79,6 @@
 
     .resume-education-description {
         display: grid;
-        grid-template-columns: auto auto;
 
         .resume-education-school-title {
             font-size: 110%;
@@ -103,5 +97,41 @@
         font-size: 140%;
         margin: 20px 0px;
         color: rgb(61, 61, 61);
+    }
+}
+
+$windowTableSisze: 600px, 768px;
+
+@each $size in $windowTableSisze {
+    @media only screen and (min-width: $size) {
+        .resume-education-description {
+            grid-template-columns: auto;
+        }
+
+        .resume-container {
+            grid-template-columns: auto;
+        }
+
+        .resume-education {
+            grid-column: span 1;
+        }
+    }
+}
+
+$windowDefaultSizes: 992px, 1200px;
+
+@each $size in $windowDefaultSizes {
+    @media only screen and (min-width: $size) {
+        .resume-education-description {
+            grid-template-columns: auto auto;
+        }
+
+        .resume-container {
+            grid-template-columns: auto auto;
+        }
+
+        .resume-education {
+            grid-column: span 2;
+        }
     }
 }
