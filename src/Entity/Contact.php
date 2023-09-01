@@ -15,6 +15,8 @@ class Contact
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
+    #[ORM\Column(length: 255)]
+    private ?string $icon_path = null;
 
     #[ORM\Column(length: 255)]
     private ?string $contact = null;
@@ -62,4 +64,20 @@ class Contact
 
         return $this;
     }
+
+	/**
+	 * @return 
+	 */
+	public function getIcon_path(): ?string {
+		return $this->icon_path;
+	}
+	
+	/**
+	 * @param  $icon_path 
+	 * @return self
+	 */
+	public function setIcon_path(?string $icon_path): static {
+		$this->icon_path = $icon_path;
+		return $this;
+	}
 }
