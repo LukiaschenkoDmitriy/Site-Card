@@ -21,9 +21,6 @@ class Contact
     #[ORM\Column(length: 255)]
     private ?string $contact = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $additional_contact = null;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -49,18 +46,6 @@ class Contact
     public function setContact(string $contact): static
     {
         $this->contact = $contact;
-
-        return $this;
-    }
-
-    public function getAdditionalContact(): ?string
-    {
-        return $this->additional_contact;
-    }
-
-    public function setAdditionalContact(string $additional_contact): static
-    {
-        $this->additional_contact = $additional_contact;
 
         return $this;
     }
