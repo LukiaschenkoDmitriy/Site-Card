@@ -10,6 +10,7 @@ import "./styles/base.scss";
 import "./styles/contact.scss";
 import "./styles/header.scss";
 
+import { scrollIntoViewBy } from "./project";
 
 function headerResponsive() {
     $('.nav_button').on('click', function() {
@@ -29,18 +30,6 @@ function headerResponsive() {
 
 
 function headerFunctions() {
-    function scrollIntoViewBy(nameElement, nameButton) {
-        $(nameButton).on("click", function() {
-            let elementOffset = $(nameElement).offset();
-
-            window.scrollTo({
-                top: elementOffset.top - 50,
-                behavior: 'smooth'
-            })
-        });
-
-    }
-
     scrollIntoViewBy(".home", ".head-home-button");
     scrollIntoViewBy(".chapter-title-about-me", ".head-about-me-button");
     scrollIntoViewBy(".chapter-title-resume", ".head-resume-button");
