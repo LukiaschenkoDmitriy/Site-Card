@@ -27,4 +27,26 @@ function headerResponsive() {
     x.addListener(maxWidth);
 }
 
+
+function headerFunctions() {
+    function scrollIntoViewBy(nameElement, nameButton) {
+        $(nameButton).on("click", function() {
+            let elementOffset = $(nameElement).offset();
+
+            window.scrollTo({
+                top: elementOffset.top - 50,
+                behavior: 'smooth'
+            })
+        });
+
+    }
+
+    scrollIntoViewBy(".home", ".head-home-button");
+    scrollIntoViewBy(".chapter-title-about-me", ".head-about-me-button");
+    scrollIntoViewBy(".chapter-title-resume", ".head-resume-button");
+    scrollIntoViewBy(".chapter-title-skills", ".head-skills-button");
+    scrollIntoViewBy(".wrapp-contact-container", ".head-contacts-button");
+}
+
+headerFunctions();
 headerResponsive();
