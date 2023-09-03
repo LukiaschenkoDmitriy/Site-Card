@@ -4,6 +4,8 @@ import './styles/index/about.scss';
 import "./styles/index/skills.scss";
 import "./styles/index/languages.scss";
 
+import { scrollIntoViewBy } from "./project";
+
 function homeJavaScript() {
     hljs.highlightAll()
     new TypeIt('.php-code code', {
@@ -14,6 +16,12 @@ function homeJavaScript() {
     });
 };
 
-window.onload = function() {
-    homeJavaScript();
-};
+function skillsHeaderFunction() {
+    let languageNames = ["csharp", "python", "php", "typescript", "nodejs"];
+    languageNames.forEach(name => {
+        scrollIntoViewBy(".skill-"+name, ".skill-"+name+"-button", -120);
+    });
+}
+
+homeJavaScript();
+skillsHeaderFunction();

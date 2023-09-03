@@ -1,5 +1,32 @@
 @use "../colors";
 
+.skill-names {
+    display:flex;
+    align-items: center;
+    height:50px;
+
+    .skill-names-name,
+    .skill-names-name-active {
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width:150px;
+        height:50px;
+    }
+
+    .skill-names-name-active {
+        font-size: 110%;
+        background-color: rgb(218, 218, 218);
+    }
+
+    .skill-names-name {
+        font-size: 110%;
+    }
+}
+
 .skills-container {
     .skills {
         .skill {
