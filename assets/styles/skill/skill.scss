@@ -1,0 +1,74 @@
+@use "../colors";
+
+.skill-container {
+    .skill {
+        display:grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    
+        .skill-subcontainer,
+        .skill-info {
+            background-color: colors.$dark-color;
+            width:100%;
+            padding: 150px 100px;
+            color: white;
+
+            div {
+                margin: 20px 0px;
+            }
+
+            .name {
+                font-size: 110%;
+            }
+
+            .projects {
+                margin: 10px 0px;
+                font-size: 110%;
+                
+                .projects-title  {
+                    font-size: 120%;
+                }
+
+                .project {
+                    a {
+                        color:white;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .resume-rate {
+                position: relative;
+                height:6px;
+                background-color: colors.$red-color;
+                margin: 10px 0px;
+        
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width:250px;
+                    height:4px;
+                    border: 1px solid colors.$red-color;
+                }
+            }
+        }
+
+        .skill-code {
+            padding-top: 20px;
+            grid-column: span 2;
+            width:100%;
+            display:grid;
+            grid-template-columns: 100%;
+            justify-items: center;
+
+            img {
+                width:100px;
+                height:100px;
+            }
+        }
+    }
+}
