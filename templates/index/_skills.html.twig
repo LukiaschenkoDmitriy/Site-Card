@@ -26,7 +26,7 @@
                         <div class="skill-description">
                             {{skill.description|slice(0, sliceMax/2)}}...
                         </div>
-                        <div class="skill-button-wrapp">
+                        <div class="skill-button-wrapp" onclick="window.location.href = '/skill/'+'{{skill.project_language}}'">
                             <div class="skill-button">
                                 <svg xmlns="http://www.w3.org/2000/svg">
                                     <rect></rect>
