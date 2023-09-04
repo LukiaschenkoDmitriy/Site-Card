@@ -1,6 +1,5 @@
-import "./styles/skill/skill.scss";
+import "./styles/about/about.scss";
 
-hljs.highlightAll();
 import { headerFunctions } from "./project";
 
 headerFunctions();
