@@ -10,8 +10,6 @@ import "./styles/base.scss";
 import "./styles/contact.scss";
 import "./styles/header.scss";
 
-import { scrollIntoViewBy } from "./project";
-
 function headerResponsive() {
     $('.nav_button').on('click', function() {
         var sub_container = $(".sub_head_container_nav");

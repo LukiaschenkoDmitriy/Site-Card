@@ -20,10 +20,10 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('base', './assets/base.js')
-    .addEntry('index', "./assets/index.js")
-    .addEntry("skill", "./assets/skill.js")
-    .addEntry("about", "./assets/about.js")
+    .addEntry('base', './assets/base/base.js')
+    .addEntry('index', "./assets/index/index.js")
+    .addEntry("skill", "./assets/skill/skill.js")
+    .addEntry("about", "./assets/about/about.js")
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
