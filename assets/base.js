@@ -28,14 +28,4 @@ function headerResponsive() {
     x.addListener(maxWidth);
 }
 
-
-function headerFunctions() {
-    scrollIntoViewBy(".home", ".head-home-button");
-    scrollIntoViewBy(".chapter-title-about-me", ".head-about-me-button");
-    scrollIntoViewBy(".chapter-title-resume", ".head-resume-button");
-    scrollIntoViewBy(".chapter-title-skills", ".head-skills-button");
-    scrollIntoViewBy(".wrapp-contact-container", ".head-contacts-button");
-}
-
-headerFunctions();
 headerResponsive();
