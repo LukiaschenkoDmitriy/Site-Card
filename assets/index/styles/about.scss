@@ -1,5 +1,20 @@
 @use "../../colors";
 
+.img-grid-container {
+    display:grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    width:100%;
+    min-height: 100vh;
+    height:auto;
+
+    img {
+        height: 500px;
+        width:500px;
+        background-color: rgb(236, 236, 236);
+    }
+}
+
 .chapter-title {
     display: flex;
     justify-content: center;

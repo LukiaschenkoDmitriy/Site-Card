@@ -35,22 +35,6 @@
     width:auto;
     height: 100v;
     gap: 30px;
-
-    .img-grid-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      width:100%;
-      min-height: 100vh;
-      height:auto;
-  
-      img {
-          height: 500px;
-          width:500px;
-          background-color: rgb(236, 236, 236);
-      }
-    }
 }
 
 .describe {

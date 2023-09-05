@@ -1,32 +1,7 @@
 <a href="" class="chapter-title" id="chapter-title-about-me"># About me</a>
 <div class="index_about_me_container">
-    <div class="code-blocks">
-        <pre class="php-code">
-            <code class="language-php">
-namespace App\Controller;
-use App\Entity\Project;
-
-use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-
-class DBProjectController extends AbstractController implements DBControllerInterface
-{
-    protected array $project_errors = [
-        "add_error" => "The project under this git link already exist",
-        "remove_error" => "The projects doesn't found" 
-    ];
-
-    #[Route('/db/project/add', name: 'app_db_project_add')]
-    public function add(EntityManagerInterface $entityManagerInterface): Response
-    {   
-        if (!array_key_exists("project", $_POST)) return $this->render('db/project/add.html.twig', ['error' => false]);
-        ...
-    }
-}
-            </code>
-        </pre>
+    <div class="img-grid-container">
+        <img src="" alt="My photo">
     </div>
     <div class="about-me-grid-container">
         <div class="index_about_me">
