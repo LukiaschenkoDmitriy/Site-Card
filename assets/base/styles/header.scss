@@ -7,6 +7,8 @@
     padding: 0px 20px;
     background-color: rgba(colors.$dark-color, .0);
     z-index: 101;
+
+    transition: background-color .2s ease;
 }
 
 .header-text {
@@ -18,61 +20,70 @@
     position: relative;
 }
 
-.head_button {
-    $width: 120px;
-    $height: 50px;
-
-    font-size: 130%;
-
-    text-decoration: none;
-    color: colors.$white-color;
-
-    display: flex;
+.head-button-wrapp {
+    padding: 5px 0px;
+    width:130px;
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    cursor: pointer;
+    font-size: 120%;
 
-    &:hover {
-        svg rect {
-            $delta: calc($width / 4);
-            $newWidth: calc($width - $delta * 2);
-
-            stroke-width: 2px;
-            stroke-dasharray: $newWidth 600;
-            stroke-opacity: 100;
-            stroke-dashoffset: -$width - $height - $delta;
-        }
-    }
-
-    svg {
-        width: $width;
-        height: $height;
-
+    div {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-    }
+        align-items: center;
+        $width: 150px;
+        $height: 50px;
 
-    svg rect {
-        width: $width;
-        height: $height;
+        width:$width;
+        height:$height;
+        position: relative;
 
-        stroke-dasharray: $width 600;
-        stroke-dashoffset: -$width - $height;
-        stroke-width: 8px;
-        stroke-opacity: 0;
-        stroke-linecap: round;
-        fill: transparent;
-        stroke: colors.$w-blue-color;
-        transition: stroke-opacity 1s, stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+        color: colors.$white-color;
+
+        cursor: pointer;
+
+        &:hover {
+            svg {
+                rect {
+                    $delta: calc($width / 4);
+                    $newWidth: calc($width - $delta * 2);
+
+                    stroke-width: 2px;
+                    stroke-dasharray: $newWidth 600;
+                    stroke-opacity: 100;
+                    stroke-dashoffset: -$width - $height - $delta;
+                }
+            }
+        }
+
+        svg {
+            position: absolute;
+            width:$width;
+            height:$height;
+
+            rect {
+                width: $width;
+                height: $height;
+
+                stroke-dasharray: $width 600;
+                stroke-dashoffset: -$width - $height;
+                stroke-width: 8px;
+                stroke-opacity: 0;
+                stroke-linecap: round;
+                fill: transparent;
+                stroke: colors.$w-blue-color;
+                transition: stroke-opacity 1s, stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+            }
+        }
     }
 }
 
 .portf_button {
-    font-size: 150%;
+    font-size: 130%;
     transition: all .5s ease;
 
     svg {
