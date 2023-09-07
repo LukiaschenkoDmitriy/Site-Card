@@ -5,7 +5,7 @@
     position: fixed;
     align-items: center;
     padding: 0px 20px;
-    background-color: rgba(colors.$dark-color, .95);
+    background-color: rgba(colors.$dark-color, .0);
     z-index: 101;
 }
 
@@ -22,7 +22,7 @@
     $width: 120px;
     $height: 50px;
 
-    font-size: 100%;
+    font-size: 130%;
 
     text-decoration: none;
     color: colors.$white-color;
@@ -36,8 +36,8 @@
 
     &:hover {
         svg rect {
-            $delta: $width / 4;
-            $newWidth: $width - $delta * 2;
+            $delta: calc($width / 4);
+            $newWidth: calc($width - $delta * 2);
 
             stroke-width: 2px;
             stroke-dasharray: $newWidth 600;
@@ -72,7 +72,14 @@
 }
 
 .portf_button {
-    font-size: 120%;
+    font-size: 150%;
+    transition: all .5s ease;
+
+    svg {
+        rect {
+            stroke: rgba(0,0,0,0);
+        }
+    }
 }
 
 .nav_button {

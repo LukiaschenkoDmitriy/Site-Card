@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 $deviceSizes: 768px, 600px, 992px, 1200px;
 
@@ -12,6 +13,6 @@ $deviceSizes: 768px, 600px, 992px, 1200px;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 17px;
+    
+    font-family: 'Montserrat', sans-serif;
 }
