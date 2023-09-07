@@ -22,8 +22,6 @@ Encore
      */
     .addEntry('base', './assets/base/base.js')
     .addEntry('index', "./assets/index/index.js")
-    .addEntry("skill", "./assets/skill/skill.js")
-    .addEntry("about", "./assets/about/about.js")
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
