@@ -18,103 +18,91 @@
   top:0;
   right:0;
   bottom:0;
-}
 
-.home-describe {
+  .home-describe {
     display: grid;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     color: white;
     width:auto;
-    height: 100v;
-    gap: 30px;
-}
+    height: 100vh;
+    gap: 50px;
 
-.describe {
-  width:450px;
-
-    h1,span {
+    .describe {
+      width:450px;
+      h1,span {
         font-size: 2.5rem;
         text-align: left;
         font-weight: 700;
-    }
+      }
 
-    .home-name,
-    .typewriter {
-        color: colors.$red-color;
-    }
-} 
+      .type-element:first-child {
+        display: inline;
+      }
 
-  @keyframes typing {
-    0.0000%, 20.3488% { content: ""; }
-    1.1395%, 19.2093% { content: "P"; }
-    2.2791%, 18.0698% { content: "PH"; }
-    3.4186%, 17.9302% { content: "PHP"; }
-  
-    24.7674%, 35.2791% { content: ""; }
-    25.9070%, 35.1395% { content: "C"; }
-    27.0465%, 33.0000% { content: "C#"; }
-  
-    35.6977%, 55.2093% { content: ""; }
-    36.8372%, 54.0698% { content: "P"; }
-    37.9767%, 53.9302% { content: "Py"; }
-    38.1163%, 52.7907% { content: "Pyt"; }
-    39.2558%, 51.6512% { content: "Pyth"; }
-    40.3953%, 50.5116% { content: "Pytho"; }
-    41.5349%, 49.3721% { content: "Python"; }
-  
-    62.6279%, 85.8605% { content: ""; }
-    63.7674%, 84.7209% { content: "S"; }
-    64.9070%, 83.5814% { content: "SQ"; }
-    65.0465%, 82.4419% { content: "SQL"; }
-  }
-  
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-  
-  .typewriter {
-    --caret: currentcolor;
-  }
-  
-  .typewriter::before {
-    content: "";
-    animation: typing 13.5s infinite;
-  }
-  
-  .typewriter::after {
-    content: "";
-    border-right: 1px solid var(--caret);
-    animation: blink 0.5s linear infinite;
-  }
-  
-  .typewriter.thick::after {
-    border-right: 1ch solid var(--caret);
-  }
-  
-  .typewriter.nocaret::after {
-    border-right: 0;
-  }
-  
-  
-  @media (prefers-reduced-motion) {
-    .typewriter::after {
-      animation: none;
-    }
+      .type-element {
+        display: none;
+      }
     
-    @keyframes sequencePopup {
-      0%, 100% { content: "PHP"; }
-      25% { content: "C#"; }
-      50% { content: "Python"; }
-      75% { content: "SQL"; }
-    }
-  
-    .typewriter::before {
-      content: "PHP";
-      animation: sequencePopup 12s linear infinite;
+      .home-name,
+      .typewriter {
+        color: colors.$red-color;
+      }
     }
   }
+
+  .home-scroll-container {
+    display: flex;
+    align-items: center;
+
+    img:first-child {
+      transform:rotate(180deg);
+      -ms-transform:rotate(180deg); /* IE 9 */
+      -moz-transform:rotate(180deg); /* Firefox */
+      -webkit-transform:rotate(180deg); /* Safari and Chrome */
+      -o-transform:rotate(180deg); /* Opera */
+    }
+
+    img {
+      width:30px;
+      height:30px;
+      object-fit: contain;
+      cursor: pointer;
+      margin: 0px 20px;
+    }
+
+    .scroll-content {
+      display: flex;
+      width:300px;
+      overflow: hidden;
+      position: relative;
+
+      .content {
+        min-width:300px;
+        text-align: center;
+        display:inline-block;
+        font-size: 110%;
+
+        img {
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+          cursor: default;
+
+          transform:rotate(0);
+          -ms-transform:rotate(0); /* IE 9 */
+          -moz-transform:rotate(0); /* Firefox */
+          -webkit-transform:rotate(0); /* Safari and Chrome */
+          -o-transform:rotate(0); /* Opera */
+        }
+
+        div {
+          margin: 20px 0px;
+        }
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .home-describe {
