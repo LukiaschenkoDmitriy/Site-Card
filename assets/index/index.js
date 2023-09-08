@@ -12,7 +12,7 @@ function homeJavaScript() {
 };
 
 function skillsHeaderFunction() {
-    let languageNames = ["csharp", "python", "php", "typescript", "nodejs"];
+    let languageNames = ["csharp", "python", "php", "nodejs"];
     languageNames.forEach(name => {
         scrollIntoViewBy(".skill-"+name, ".skill-"+name+"-button", -120);
     });
