@@ -85,7 +85,25 @@ function skillFuncitons() {
     $(skills[0]).attr("class", "skill");
 }
 
+function contactFunctions() {
+    let contacts = $(".contact");
+    let nameContainers = $(".contact > a > div");
+
+    // contacts.length == nameContainers.length
+
+    for (let index = 0; index < contacts.length; index++) {
+        $(contacts[index]).on("mouseover", () => {
+            $(nameContainers[index]).css("width", "125px");
+        })
+
+        $(contacts[index]).on("mouseleave", () => {
+            $(nameContainers[index]).css("width", "0px");
+        })
+    }
+}
+
 scrollContent();
 homeJavaScript();
 skillsHeaderFunction();
 skillFuncitons();
+contactFunctions();

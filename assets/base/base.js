@@ -7,7 +7,6 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import "./styles/base.scss";
-import "./styles/contact.scss";
 import "./styles/header.scss";
 
 import { scrollIntoViewBy } from "../function";
