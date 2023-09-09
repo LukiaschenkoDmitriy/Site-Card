@@ -1,166 +1,156 @@
 @use "../../colors";
 
-.skill-names {
-    display:flex;
-    align-items: center;
-    height:50px;
-
-    .skill-names-name,
-    .skill-names-name-active {
-        cursor: pointer;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        width:150px;
-        height:50px;
-    }
-
-    .skill-names-name-active {
-        font-size: 110%;
-        background-color: rgb(218, 218, 218);
-    }
-
-    .skill-names-name {
-        font-size: 110%;
-    }
-}
-
 .skills-container {
-    .skills {
-        .skill {
-            display: flex;
-            height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+
+    .skill-choise {
+        display:flex;
+
+        .skill-button-wrapp {
+            width:100%;
+            margin:20px 20px;
+            display:flex;
             flex-direction: column;
             justify-content: center;
-            .skill-code {
+            align-items: center;
+
+            @mixin button {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-content: center;
-                flex-wrap: nowrap;
                 align-items: center;
+                $width: 280px;
+                $height: 400px;
+                padding: 0px 10px;
 
-                img {
-                    margin-top: 50px;
-                    width:100px;
-                    height:100px;
+                width:$width;
+                height:$height;
+                position: relative;
+
+                color: colors.$white-color;
+
+                background-color: rgb(255,255,255);
+
+                cursor: pointer;
+
+                transition: background-color .5s ease;
+
+                div {
+                    display: grid;
+                    grid-template-columns: 100%;
+                    justify-items: center;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        object-fit: cover;
+                        margin-bottom: 20px;
+                    }
+
+                    div {
+                        color: colors.$dark-color;
+                        width:100%;
+                        font-size: 110%;
+                    }
                 }
 
-                pre {
-                    width:470px;
-                    border-radius: 5px;
-                    overflow: auto;
-                    max-width: 1000px;
-                    white-space: pre-wrap;
-                    font-family: Courier, monospace;
-                    font-size: 16px;
-                    animation: fadeIn 2s ease forwards;
+                &:hover {
+                    background-color: rgb(243, 243, 243);
 
-                    code {
-                        background: none;
+                    svg {
+                        rect {
+                            $delta: calc($width / 5);
+                            $newWidth: calc($width - $delta * 2);
+        
+                            stroke-width: 2px;
+                            stroke-dasharray: $newWidth 1000;
+                            stroke-opacity: 100;
+                            stroke-dashoffset: -$width - $height - $delta;
+                        }
+                    }
+                }
+        
+                svg {
+                    position: absolute;
+                    width:$width;
+                    height:$height;
+        
+                    rect {
+                        width: $width;
+                        height: $height;
+        
+                        stroke-dasharray: $width 800;
+                        stroke-dashoffset: -$width - $height;
+                        stroke-width: 8px;
+                        stroke-linecap: round;
+                        fill: transparent;
+                        stroke: colors.$dark-color;
+                        transition: stroke-opacity 1s, stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+                    }
+                }
+            }
+
+            .skill-button-active {
+                @include button;
+
+                border-radius: 5px;
+                background-color: rgb(243, 243, 243);
+
+                svg {
+                    rect {
+                        stroke-opacity: 100%;
+                    }
+                }
+            }
+
+            .skill-button {
+                @include button;
+
+                svg {
+                    rect {
+                        stroke-opacity: 0%;
                     }
                 }
             }
         }
     }
-}
 
-.skill-subcontainer {
-    padding: 50px;
-    color:white;
-    width:100%;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .skill-container {
+        display:grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        .skill-no-active {
+            display: none;
+        }
 
-    background-color: colors.$dark-color;
+        .skill {
+            width:100%;
+            display:grid;
+            grid-template-columns: 50% 50%;
+            justify-items: center;
 
-    .skill-description {
-        font-size: 150%;
-        width:500px;
-        z-index: 100;
-    }
-}
+            .full-description {
+                width:300px;
+                font-size: 120%;
+                margin-top: 100px;
+            }
 
-.skill-button-wrapp {
-    margin-top: 70px;
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .skill-button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        $width: 150px;
-        $height: 50px;
-
-        width:$width;
-        height:$height;
-        position: relative;
-
-        color: colors.$white-color;
-
-        cursor: pointer;
-
-        &:hover {
-            svg {
-                rect {
-                    stroke-dasharray: 100%;
-                    stroke-dashoffset: -$width - $height + $width;
-                    stroke-width: 4px;
+            .code-example {
+                width:100%;
+                height:auto;
+                background-color: rgba(255, 255, 255, 0.815);
+                padding: 20px;
+                border-radius: 5px;
+                overflow: auto;
+                white-space: pre-wrap;
+                font-family: Courier, monospace;
+                font-size: 16px;
+            
+                code {
+                  background: none;
                 }
             }
-        }
-
-        svg {
-            position: absolute;
-            width:$width;
-            height:$height;
-
-            rect {
-                width:$width;
-                height:$height;
-
-                stroke-dasharray: $width 600;
-                stroke-dashoffset: -$width - $height;
-                stroke-width: 8px;
-                stroke-linecap: round;
-                fill: transparent;
-                stroke: colors.$white-color;
-                transition: stroke-opacity 1s, stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-            }
-        }
-    }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .skill {
-        grid-template-columns: 100%;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 600px) {
-    .skill {
-        grid-template-columns: 100%;
-    }
-}
-
-$windowSizes: 768px, 992px, 1200px;
-
-@each $size in $windowSizes {
-    @media only screen and (min-width: $size) {
-        .skill {
-            grid-template-columns: 50% 50%;
         }
     }
 }
