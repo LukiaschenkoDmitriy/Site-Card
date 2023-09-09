@@ -25,7 +25,7 @@
                 {{skill.description}}</div>
             <pre class="code-example">
                 <code class="{{skill.hljs_tag}}">
-                    {{skill.code}}
+                    {{skill.code|slice(0, 1000)}}
                 </code>
             </pre>
         </div>
