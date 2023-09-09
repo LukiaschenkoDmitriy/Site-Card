@@ -76,12 +76,16 @@
       }
 
       .type-element:first-child {
-        display: inline;
+        width:100px;
       }
 
       .type-element {
-        display: none;
+        margin-bottom: -12px;
+        display:inline-block;
+        width: 0px;
         color: colors.$red-color;
+        overflow-x: hidden;
+        transition: width 1s ease;
       }
     
       .home-name,

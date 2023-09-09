@@ -61,9 +61,9 @@ function updateTypeElement(event) {
     }
     for (let index = 0; index < typeElements.length; index++) {
         if (index == currentBox) {
-            $(typeElements[index]).css("display", "inline");
+            $(typeElements[index]).css("width", "150px");
         } else {
-            $(typeElements[index]).css("display", "none");
+            $(typeElements[index]).css("width", "0px");
         }
     }
 }
