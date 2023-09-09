@@ -3,7 +3,6 @@
 .about-container {
     margin:40px 0px;
     display: grid;
-    grid-template-columns: 50% 50%;
     justify-items: center;
 
     img {
@@ -13,7 +12,6 @@
 
     .about {
         font-size: 110%;
-        width:100%;
         .title {
             color: black;
             font-size: 180%;
@@ -100,6 +98,24 @@
                     }
                 }
             }
+        }
+    }
+}
+  
+$windowTableSisze: 600px, 768px;
+@each $size in $windowTableSisze {
+    @media only screen and (min-width: $size) {
+        .about-container {
+            grid-template-columns: 100%;
+        }
+    }
+}
+
+$windowDefaultSizes: 992px, 1200px;
+@each $size in $windowDefaultSizes {
+    @media only screen and (min-width: $size) {
+        .about-container {
+            grid-template-columns: 50% 50%;
         }
     }
 }
