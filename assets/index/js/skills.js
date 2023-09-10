@@ -24,6 +24,7 @@ function skillFuncitons() {
     $(skills[0]).attr("class", "skill");
 }
 
+
 export function skillsInit() {
     skillFuncitons();
 }

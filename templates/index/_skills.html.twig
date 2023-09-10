@@ -1,5 +1,5 @@
-<a href="" class="chapter-title" id="chapter-title-skills"></a>
 <div class="skills-container">
+    <div class="title" id="chapter-title-skills">Skills</div>
     <div class="skill-choise">
         {% for skill in skills %}
             <div class="skill-button-wrapp">
@@ -22,7 +22,7 @@
         <div class="skill">
             <div class="full-description">
                 <h2 class="title">More about my experience in {{skill.name}}</h2>
-                {{skill.description}}
+                <div>{{skill.description}}</div>
             </div>
             <pre class="code-example">
                 <code class="{{skill.hljs_tag}}">

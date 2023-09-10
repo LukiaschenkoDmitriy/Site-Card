@@ -1,5 +1,12 @@
 @use "../../colors";
 
+.title {
+    color: black;
+    font-size: 180%;
+    margin: 20px 0px;
+    font-weight: 400;
+}
+
 .about-container {
     margin:40px 0px;
     display: grid;
@@ -12,12 +19,6 @@
 
     .about {
         font-size: 110%;
-        .title {
-            color: black;
-            font-size: 180%;
-            margin: 20px 0px;
-            font-weight: 400;
-        }
 
         .little-description {
             color: rgb(44, 44, 44);
