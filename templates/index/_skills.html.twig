@@ -10,7 +10,7 @@
                     <div class="skill">
                         <img src="{{skill.icon_path}}" alt="">
                         <div class="description">
-                            {{skill.description|slice(0,250)}}
+                            {{skill.base_description}}
                         </div>
                     </div>
                 </div>
@@ -21,8 +21,9 @@
         {% for skill in skills %}
         <div class="skill">
             <div class="full-description">
-                <h2 class="title">More about {{skill.name}}</h2>
-                {{skill.description}}</div>
+                <h2 class="title">More about my experience in {{skill.name}}</h2>
+                {{skill.description}}
+            </div>
             <pre class="code-example">
                 <code class="{{skill.hljs_tag}}">
                     {{skill.code|slice(0, 1000)}}
