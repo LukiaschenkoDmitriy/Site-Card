@@ -73,20 +73,20 @@
         font-size: 2.5rem;
         text-align: left;
         font-weight: 700;
-      }
 
-      .type-element:first-child {
-        width:100px;
+        .type-element {
+          font-size: 2.5rem;
+          text-align: left;
+          font-weight: 700;
+          margin-bottom: -12px;
+          display:inline-block;
+          width: 200px;
+          color: colors.$red-color;
+          overflow-x: hidden;
+          transition: width 1s ease;
+        }
       }
-
-      .type-element {
-        margin-bottom: -12px;
-        display:inline-block;
-        width: 0px;
-        color: colors.$red-color;
-        overflow-x: hidden;
-        transition: width 1s ease;
-      }
+      
     
       .home-name,
       .typewriter {

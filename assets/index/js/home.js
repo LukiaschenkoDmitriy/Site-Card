@@ -59,13 +59,6 @@ function updateTypeElement(event) {
         if (currentBox - 1 < 0) return;
         currentBox--;
     }
-    for (let index = 0; index < typeElements.length; index++) {
-        if (index == currentBox) {
-            $(typeElements[index]).css("width", "150px");
-        } else {
-            $(typeElements[index]).css("width", "0px");
-        }
-    }
 }
 
 export function homeInit() {
