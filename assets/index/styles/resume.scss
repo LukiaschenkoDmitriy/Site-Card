@@ -90,6 +90,10 @@ $windowTableSisze: 600px, 768px;
         .resume-education {
             grid-column: span 1;
         }
+
+        .chapter-title-resume {
+            grid-column: span 1;
+        }
     }
 }
 
@@ -106,6 +110,10 @@ $windowDefaultSizes: 992px, 1200px;
         }
 
         .resume-education {
+            grid-column: span 2;
+        }
+
+        .chapter-title-resume {
             grid-column: span 2;
         }
     }

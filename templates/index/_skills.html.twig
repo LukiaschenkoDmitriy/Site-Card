@@ -22,11 +22,23 @@
         <div class="skill">
             <div class="full-description">
                 <h2 class="title">More about my experience in {{skill.name}}</h2>
+                <div class="duration">Duration: {{skill.duration}}</div>
+                <div class="projects">
+                    Projects:
+                    {% for project in projects %}
+                        {% if project.language == skill.name %}
+                        <div class="project">
+                            <a href="{{project.git_path}}">{{project.name}}</a>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                
                 <div>{{skill.description}}</div>
             </div>
             <pre class="code-example">
                 <code class="{{skill.hljs_tag}}">
-                    {{skill.code|slice(0, 1000)}}
+                    {{skill.code|slice(0, skill.description|length * 2)}}
                 </code>
             </pre>
         </div>
