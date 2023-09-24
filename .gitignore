@@ -29,3 +29,4 @@ yarn-error.log
 /.ssh
 /.trash
 /.lastlogin
+/.bash_history
