@@ -19,6 +19,7 @@
         height:6px;
         background-color: colors.$red-color;
         margin: 10px 0px;
+        width:50%;
 
         &::before {
             position: absolute;
@@ -31,24 +32,28 @@
 
     .resume-skill-description,
     .resume-language-description {
-        width:400px;
         display:flex;
         flex-direction: column;
+        width:90%;
     }
 
     .resume-skill,
     .resume-language {
         display:flex;
+        width:100%;
         margin: 10px 0px;
-        width:400px;
 
         .resume-name {
             display: flex;
             align-items: center;
 
             font-size: 110%;
-            width:100px;
+            width:30%;
             margin:0x;
+        }
+
+        .skill-rate {
+            width:70%;
         }
     }
 
@@ -91,7 +96,7 @@ $windowTableSisze: 600px, 768px;
             grid-column: span 1;
         }
 
-        .chapter-title-resume {
+        #chapter-title-resume {
             grid-column: span 1;
         }
     }
@@ -113,7 +118,7 @@ $windowDefaultSizes: 992px, 1200px;
             grid-column: span 2;
         }
 
-        .chapter-title-resume {
+        #chapter-title-resume {
             grid-column: span 2;
         }
     }

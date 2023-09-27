@@ -37,6 +37,7 @@
                 <div>{{skill.description}}</div>
             </div>
             <pre class="code-example">
+                <h2 class="title">Code preview {{skill.name}}</h2>
                 <code class="{{skill.hljs_tag}}">
                     {{skill.code|slice(0, skill.description|length * 2)}}
                 </code>

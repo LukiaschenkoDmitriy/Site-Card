@@ -68,7 +68,7 @@
     gap: 50px;
 
     .describe {
-      width:450px;
+      width:70%;
       h1,span {
         font-size: 2.5rem;
         text-align: left;
@@ -98,6 +98,7 @@
   .home-scroll-container {
     display: flex;
     align-items: center;
+    width:70%;
 
     img:first-child {
       transform:rotate(180deg);
@@ -117,12 +118,12 @@
 
     .scroll-content {
       display: flex;
-      width:300px;
+      width: 200px;
       overflow: hidden;
       position: relative;
 
       .content {
-        min-width:300px;
+        min-width:100%;
         text-align: center;
         display:inline-block;
         font-size: 110%;
@@ -141,7 +142,7 @@
         }
 
         div {
-          margin: 20px 0px;
+          margin: 30px 0px;
         }
       }
     }
@@ -157,6 +158,18 @@
   .home {
     height:900px;
     background-size: 560%;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .home-describe {
+    grid-template-columns: 100%;
+    margin-top: 100px;
+  }
+
+  .home {
+    height:900px;
+    background-size: 460%;
   }
 }
 

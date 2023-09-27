@@ -6,7 +6,12 @@
     justify-items: center;
 
     .skill-choise {
+        display: flex;
+        flex-wrap: wrap;
         .skill-button-wrapp {
+            flex-basis: 300px;
+            flex-grow: 1;
+
             width:100%;
             margin:20px 20px;
             display:flex;
@@ -136,7 +141,7 @@
                 width:100%;
                 font-size: 120%;
                 margin-top: 100px;
-                padding: 0px 100px;
+                padding: 0px 50px;
 
                 div {
                     margin: 20px 0px;
@@ -171,66 +176,11 @@
                 code {
                   background: none;
                 }
+
+                .title {
+                    margin: 0px 25px;
+                }
             }
         }
-    }
-}
-
-
-@media only screen and (min-width: 600px) {
-    .skill-choise {
-        display: grid;
-        grid-template-columns: 100%;
-    }
-
-    .skill-choise:last-child {
-        grid-column: 1;
-    }
-
-    .skill {
-        grid-template-columns: 100%;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .skill-choise:last-child {
-        grid-column: span 2;
-    }
-
-    .skill-choise {
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    .skill {
-        grid-template-columns: 100%;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .skill-choise:last-child {
-        grid-column: span 2;
-    }
-    .skill-choise {
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    .skill {
-        grid-template-columns: 50% 50%;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .skill-choise:last-child {
-        grid-column: span 2;
-    }
-    .skill-choise {
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    .skill {
-        grid-template-columns: 50% 50%;
     }
 }

@@ -25,14 +25,14 @@ function scrollContent() {
 
     function scrollLeft() {
         scrollContent.scrollBy({
-            left: -300,
+            left: -190,
             behavior: "smooth",
         });
     }
 
     function scrollRight() {
         scrollContent.scrollBy({
-            left: 300,
+            left: 190,
             behavior: "smooth",
         });
     }
