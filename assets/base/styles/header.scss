@@ -188,13 +188,3 @@
         justify-content: space-between;
     }
 }
-
-$windowSizes: 768px, 992px, 1200px;
-
-@each $size in $windowSizes {
-    @media only screen and (min-width: $size) {
-        .header {
-            //width:$size;
-        }
-    }
-}
