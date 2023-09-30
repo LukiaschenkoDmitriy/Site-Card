@@ -1,12 +1,12 @@
-import "./styles/home.scss";
-import './styles/resume.scss';
-import './styles/about.scss';
-import "./styles/skills.scss";
+import "./home/home.scss";
+import './resume/resume.scss';
+import './about/about.scss';
+import "./skills/skills.scss";
 
-import { homeInit } from "./js/home";
-import { skillsInit } from "./js/skills";
-import { resumeInit } from "./js/resume";
-import { aboutInit } from "./js/about";
+import { homeInit } from "./home/home";
+import { skillsInit } from "./skills/skills";
+import { resumeInit } from "./resume/resume";
+import { aboutInit } from "./about/about";
 
 homeInit();
 skillsInit();
