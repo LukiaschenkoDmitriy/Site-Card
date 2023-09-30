@@ -36,6 +36,7 @@ yarn-error.log
 /.gitconfig
 /.bashrc
 /.cache/
+/.git-credentials
 /.cl.selector/
 /.config/
 /.ftpquota

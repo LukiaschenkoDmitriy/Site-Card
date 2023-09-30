@@ -122,3 +122,22 @@
 [30-Sep-2023 23:58:48 Europe/Kyiv] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelFinishRequest".
 [30-Sep-2023 23:58:48 Europe/Kyiv] [debug] Notified event "kernel.finish_request" to listener "Symfony\WebpackEncoreBundle\EventListener\ResetAssetsEventListener::resetAssets".
 [30-Sep-2023 23:58:48 Europe/Kyiv] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleAwareListener::onKernelFinishRequest".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [info] Matched route "app_index".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\DebugHandlersListener::configure".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\ValidateRequestListener::onKernelRequest".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onKernelRequest".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::setDefaultLocale".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelRequest".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelRequest".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleAwareListener::onKernelRequest".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.controller_arguments" to listener "Symfony\Component\HttpKernel\EventListener\CacheAttributeListener::onKernelControllerArguments".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.controller_arguments" to listener "Symfony\Component\HttpKernel\EventListener\ErrorListener::onControllerArguments".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\CacheAttributeListener::onKernelResponse".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ErrorListener::removeCspHeader".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\DisallowRobotsIndexingListener::onResponse".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\SessionListener::onKernelResponse".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelFinishRequest".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelFinishRequest".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.finish_request" to listener "Symfony\WebpackEncoreBundle\EventListener\ResetAssetsEventListener::resetAssets".
+[01-Oct-2023 00:12:59 Europe/Kyiv] [debug] Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleAwareListener::onKernelFinishRequest".
