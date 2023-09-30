@@ -28,10 +28,12 @@ yarn-error.log
 /.softaculous
 /.ssh
 /.trash
+/.pass
 /.lastlogin
 /.bash_history
 /.bash_logout
 /.bash_profile
+/.gitconfig
 /.bashrc
 /.cache/
 /.cl.selector/
