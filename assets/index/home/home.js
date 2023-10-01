@@ -1,3 +1,5 @@
+import anime from "animejs";
+
 function homeJavaScript() {
     hljs.highlightAll()
 };
@@ -65,4 +67,22 @@ export function homeInit() {
     homeJavaScript();
     contactFunctions();
     scrollContent();
+
+    anime({
+        targets: ".home-describe > div",
+        translateY: ["-100px", "0px"],
+        opacity: ["0%", "100%"],
+        delay: function(div, i, l) {
+            return (i+1) * 250;
+        },
+        duration: 2000
+    });
+
+    anime({
+        targets: ".contacts",
+        translateY: ["-100px", "0px"],
+        opacity: ["0%", "100%"],
+        delay: 750,
+        duration: 2000
+    });
 }

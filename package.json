@@ -20,7 +20,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "google-maps": "^4.3.3",
+        "animejs": "^3.2.1",
         "gsap": "^3.12.2",
         "typeit": "^8.7.1"
     }

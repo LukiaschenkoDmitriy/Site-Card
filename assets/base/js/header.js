@@ -1,4 +1,5 @@
 import { scrollIntoViewBy } from "../../function";
+import anime from "animejs";
 
 function headerResponsive() {
     $('.nav_button').on('click', function () {
@@ -41,5 +42,13 @@ function headerScrollTrigger() {
 export function headerInit() {
     headerScrollTrigger();
     headerFunctions();
-    headerResponsive(); 
+    headerResponsive();
+
+    anime({
+        targets: ".header_container",
+        translateY: ["100px", "0px"],
+        opacity: ["0%", "100%"],
+        delay: 1000,
+        duration: 2000
+    });
 }
