@@ -19,6 +19,7 @@ yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
 # web host files
+/.myimunify_id
 /.cagefs
 /.cpanel
 /.cphorde
