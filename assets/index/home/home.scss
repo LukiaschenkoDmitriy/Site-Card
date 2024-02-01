@@ -60,6 +60,7 @@
   bottom:0;
 
   .home-describe {
+    text-align: center;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -69,20 +70,29 @@
     gap: 50px;
 
     .describe {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       opacity: 0%;
       width:70%;
       h1,span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         font-size: 2.5rem;
         text-align: left;
         font-weight: 700;
 
         .type-element {
+          text-align: center;
           font-size: 2.5rem;
           text-align: left;
           font-weight: 700;
           margin-bottom: -12px;
           display:inline-block;
-          width: 200px;
           color: colors.$red-color;
           overflow-x: hidden;
           transition: width 1s ease;
@@ -122,13 +132,14 @@
 
     .scroll-content {
       display: flex;
-      width: 200px;
+      width: 300px;
       overflow: hidden;
       position: relative;
 
       .content {
         min-width:100%;
         text-align: center;
+        margin: 0px 5px;
         display:inline-block;
         font-size: 110%;
 
@@ -157,6 +168,10 @@
   .home-describe {
     grid-template-columns: 100%;
     margin-top: 100px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .home {
@@ -169,6 +184,10 @@
   .home-describe {
     grid-template-columns: 100%;
     margin-top: 100px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .home {
@@ -180,8 +199,12 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 600px) {
   .home-describe {
+    text-align: center;
     grid-template-columns: 100%;
     margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .home {
@@ -193,8 +216,12 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .home-describe {
+    text-align: center;
     grid-template-columns: 100%;
     margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .home {
@@ -206,7 +233,11 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .home-describe {
+    text-align: center;
     grid-template-columns: 50% 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .home {
@@ -218,7 +249,11 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .home-describe {
+    text-align: center;
     grid-template-columns: 50% 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .home {

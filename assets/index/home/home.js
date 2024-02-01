@@ -22,21 +22,35 @@ function contactFunctions() {
 }
 
 var currentBox = 0;
+var isScrolling = false;
+
 function scrollContent() {
     let scrollContent = document.querySelector(".scroll-content");
 
     function scrollLeft() {
-        scrollContent.scrollBy({
-            left: -190,
-            behavior: "smooth",
-        });
+        if (!isScrolling) {
+            isScrolling = true;
+            scrollContent.scrollBy({
+                left: -200,
+                behavior: "smooth",
+            });
+            setTimeout(() => {
+                isScrolling = false;
+            }, 250);
+        }
     }
 
     function scrollRight() {
-        scrollContent.scrollBy({
-            left: 190,
-            behavior: "smooth",
-        });
+        if (!isScrolling) {
+            isScrolling = true;
+            scrollContent.scrollBy({
+                left: 200,
+                behavior: "smooth",
+            });
+            setTimeout(() => {
+                isScrolling = false;
+            }, 250);
+        }
     }
 
     let buttons = $(".home-scroll-container > img");
@@ -47,7 +61,7 @@ function scrollContent() {
     });
     $(buttons[1]).on("click", () => {
         updateTypeElement("inc");
-    })
+    });
 }
 
 function updateTypeElement(event) {
@@ -56,12 +70,12 @@ function updateTypeElement(event) {
     if (event == "inc") {
         if (currentBox + 1 > typeElements.length - 1) return;
         currentBox++;
-    }
-    else if (event == "dec") {
+    } else if (event == "dec") {
         if (currentBox - 1 < 0) return;
         currentBox--;
     }
 }
+
 
 export function homeInit() {
     homeJavaScript();
