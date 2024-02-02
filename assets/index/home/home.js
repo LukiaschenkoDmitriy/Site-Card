@@ -31,7 +31,7 @@ function scrollContent() {
         if (!isScrolling) {
             isScrolling = true;
             scrollContent.scrollBy({
-                left: -200,
+                left: -210,
                 behavior: "smooth",
             });
             setTimeout(() => {
@@ -44,7 +44,7 @@ function scrollContent() {
         if (!isScrolling) {
             isScrolling = true;
             scrollContent.scrollBy({
-                left: 200,
+                left: 210,
                 behavior: "smooth",
             });
             setTimeout(() => {

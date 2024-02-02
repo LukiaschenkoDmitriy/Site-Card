@@ -1,185 +1,108 @@
-@use "../../colors";
+.skill-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.skills-container {
-    display: grid;
-    grid-template-columns: 100%;
-    justify-items: center;
-
-    .skill-choise {
+    .container-res {
         display: flex;
-        flex-wrap: wrap;
-        .skill-button-wrapp {
-            flex-basis: 300px;
-            flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        height: auto;
 
-            width:100%;
-            margin:20px 20px;
-            display:flex;
-            flex-direction: column;
+        .resume-sub-container {
+            width: 80vw;
             justify-content: center;
-            align-items: center;
+            height:auto;
 
-            @mixin button {
+            .resume-skills {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
-                $width: 280px;
-                $height: 400px;
-                padding: 0px 10px;
+                width: 80vw;
+            }
+        }
+    }
+}
 
-                width:$width;
-                height:$height;
-                position: relative;
+.skill {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 50px 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
 
-                color: colors.$white-color;
+    &:hover {
+        img {
+            filter: blur(5px) brightness(20%);
+            -webkit-filter: blur(1px) brightness(20%); /* Для Safari і Chrome */
+            -moz-filter: blur(5px) brightness(20%); /* Для Firefox */
+            -o-filter: blur(5px) brightness(20%); /* Для Opera */
+            -ms-filter: blur(5px) brightness(20%); /* Для Internet Explorer */ 
+        }
 
-                background-color: rgb(255,255,255);
-
-                cursor: pointer;
-
-                transition: background-color .5s ease;
-
-                div {
-                    display: grid;
-                    grid-template-columns: 100%;
-                    justify-items: center;
-                    img {
-                        width: 60px;
-                        height: 60px;
-                        object-fit: cover;
-                        margin-bottom: 20px;
-                    }
-
-                    div {
-                        color: colors.$dark-color;
-                        width:100%;
-                        font-size: 110%;
-                    }
-                }
-
-                &:hover {
-                    background-color: rgb(243, 243, 243);
-
-                    svg {
-                        rect {
-                            $delta: calc($width / 5);
-                            $newWidth: calc($width - $delta * 2);
-        
-                            stroke-width: 2px;
-                            stroke-dasharray: $newWidth 1000;
-                            stroke-opacity: 100;
-                            stroke-dashoffset: -$width - $height - $delta;
-                        }
-                    }
-                }
-        
-                svg {
-                    position: absolute;
-                    width:$width;
-                    height:$height;
-        
-                    rect {
-                        width: $width;
-                        height: $height;
-        
-                        stroke-dasharray: $width 800;
-                        stroke-dashoffset: -$width - $height;
-                        stroke-width: 8px;
-                        stroke-linecap: round;
-                        fill: transparent;
-                        stroke: colors.$dark-color;
-                        transition: stroke-opacity 1s, stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-                    }
-                }
+        .skill-cosas {
+            img.logo {
+                width: 40px;
+                height: 40px;
             }
 
-            .skill-button-active {
-                @include button;
-
-                border-radius: 5px;
-                background-color: rgb(243, 243, 243);
-
-                svg {
-                    rect {
-                        stroke-opacity: 100%;
-                    }
-                }
-            }
-
-            .skill-button {
-                @include button;
-
-                svg {
-                    rect {
-                        stroke-opacity: 0%;
-                    }
-                }
+            .skill-name {
+                font-size: 140%;
             }
         }
     }
 
-    .skill-container {
-        margin: 50px 0px;
-        display:grid;
-        grid-template-columns: 100%;
-        justify-items: center;
-        .skill-no-active {
-            display: none;
+    img {
+        position: absolute;
+        width: 100%;
+        transform: scale(2.5) translateY(40px);
+        filter: blur(5px) brightness(50%);
+        -webkit-filter: blur(1px) brightness(50%); /* Для Safari і Chrome */
+        -moz-filter: blur(5px) brightness(50%); /* Для Firefox */
+        -o-filter: blur(5px) brightness(50%); /* Для Opera */
+        -ms-filter: blur(5px) brightness(50%); /* Для Internet Explorer */
+        z-index: 0;
+
+        transition: all .5s ease;
+    }
+    
+    .skill-cosas {
+        z-index: 10;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        img.logo {
+            filter: none;
+            width: 30px;
+            height: 30px;
+            transition: all .5s ease;
         }
 
-        .skill {
-            width:100%;
-            display:grid;
-            justify-items: center;
+        .skill-name {
+            color: #fff;
+            font-size: 120%;
+            margin-top: 200px;
+            transition: all .5s ease;
+        }
 
-            .title {
-                margin: 20px 0px;
-            }
-
-            .full-description {
-                width:100%;
-                font-size: 120%;
-                margin-top: 100px;
-                padding: 0px 50px;
-
-                div {
-                    margin: 20px 0px;
-                }
-
-                .duration {
-                    font-weight: 500;
-                }
-
-                .projects {
-                    .project {
-                        margin:10px 0px;
-                        a {
-                            font-weight: 500;
-                            color: colors.$dark-color;
-                        }
-                    }
-                }
-            }
-
-            .code-example {
-                width:100%;
-                height:auto;
-                background-color: rgba(255, 255, 255, 0.815);
-                padding: 20px;
-                border-radius: 5px;
-                overflow: auto;
-                white-space: pre-wrap;
-                font-family: Courier, monospace;
-                font-size: 16px;
-            
-                code {
-                  background: none;
-                }
-
-                .title {
-                    margin: 0px 25px;
-                }
+        .skill-progress {
+            margin-top: 30px;
+            position: relative;
+            height:7px;
+            border: 1px solid white;
+            width:50%;
+            border-radius: 5px;
+    
+            .line {
+                height:100%;
+                background-color: white;
             }
         }
     }

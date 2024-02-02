@@ -1,5 +1,4 @@
 import { scrollIntoViewBy } from "../../function";
-import anime from "animejs";
 
 function headerResponsive() {
     $('.nav_button').on('click', function () {
@@ -24,7 +23,8 @@ function headerFunctions() {
     scrollIntoViewBy("#home", ".head-home-button");
     scrollIntoViewBy("#chapter-title-about-me", ".head-about-me-button", -100);
     scrollIntoViewBy("#chapter-title-resume", ".head-resume-button", -100);
-    scrollIntoViewBy("#chapter-title-skills", ".head-skills-button", -100);
+    scrollIntoViewBy("#chapter-education", ".head-education-button", -100);
+    scrollIntoViewBy("#chapter-skills", ".head-skills-button", -100);
 }
 function headerScrollTrigger() {
     addEventListener("scroll", function () {
@@ -43,12 +43,4 @@ export function headerInit() {
     headerScrollTrigger();
     headerFunctions();
     headerResponsive();
-
-    anime({
-        targets: ".header_container",
-        translateY: ["100px", "0px"],
-        opacity: ["0%", "100%"],
-        delay: 1000,
-        duration: 2000
-    });
 }

@@ -15,11 +15,15 @@ class Skill
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
-
-    #[ORM\Column(type:"text")]
-    private ?string $description = null;
+    
     #[ORM\Column]
     private ?float $rate = null;
+
+    #[ORM\Column]
+    private ?string $bg = null;
+
+    #[ORM\Column]
+    private ?string $logo = null;
 
     public function getId(): ?int
     {
@@ -50,19 +54,25 @@ class Skill
         return $this;
     }
 
-	/**
-	 * @return 
-	 */
-	public function getDescription(): ?string {
-		return $this->description;
-	}
-	
-	/**
-	 * @param  $description 
-	 * @return self
-	 */
-	public function setDescription(?string $description): static {
-		$this->description = $description;
-		return $this;
-	}
+    public function getBg(): ?string
+    {
+        return $this->bg;
+    }
+
+    public function setBg(?string $bg): static
+    {
+        $this->bg = $bg;
+        return $this;
+    }
+
+    public function getLogo(): ?string
+    {
+        return $this->logo;
+    }
+
+    public function setLogo(?string $logo): static
+    {
+        $this->logo = $logo;
+        return $this;
+    }
 }

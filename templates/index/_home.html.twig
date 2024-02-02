@@ -2,7 +2,7 @@
     <div class="contacts">
         {% for contact in contacts %}
         {% set preffix = "" %}
-        {% if (contact.name == "Phone Ukraine" or contact.name == "Phone Polish") %}
+        {% if (contact.name == "Phone") %}
             {% set preffix = "tel:" %}
         {% endif %}
         <div class="contact">

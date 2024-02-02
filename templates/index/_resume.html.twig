@@ -1,53 +1,34 @@
-
-<div class="resume-container">    
-    <div class="title" id="chapter-title-resume">Resume</div>
-    <div class="resume-education resume-chapter">
-        <div class="resume-title">Education</div>
-        <div class="resume-description resume-education-description">
-            <div class="resume-education-school">
-                <div class="resume-education-school-title">Bohodukhivka NVK (Middle School)</div>
-                <div class="resume-education-school-description">
-                    I studied at Bohodukhivka NVK, located in the comfortable small village of Bohodukhivka in Ukraine. 
-                    During my studies here, starting from the first grades and ending with the 11th grade, 
-                    I passed an important way to get a full secondary education. My academic years in this 
-                    school are marked by average grades in various subjects. This place not only gave me 
-                    knowledge but also helped me to become more motivated and organized.
+<div class="resume-container background-resume">
+    <div class="container-res">
+        <div class="resume-sub-container">
+            <div class="cnt">
+                <div class="title" id="chapter-education">Education</div>
+                <div class="resume-education-school">
+                    <div class="resume-education-school-title">WSPA (Hight School)</div>
+                    <div class="resume-education-school-description">
+                        I am currently a second-year student at WSPA University in Lubin, Poland,
+                        majoring in Computer Science. The choice of profession was meaningful and 
+                        reasonable for me, and I feel really passionate about working in the field 
+                        of web development. During my first year, I received excellent grades, 
+                        which further increased my motivation for further achievements. 
+                        Studying at WSPA provides me with a great opportunity to deepen my knowledge 
+                        in the field of computer science, especially in the context of web development.
+                    </div>
                 </div>
             </div>
-            <div class="resume-education-school">
-                <div class="resume-education-school-title">WSPA (Hight School)</div>
-                <div class="resume-education-school-description">
-                    I am currently a second-year student at WSPA University in Lubin, Poland,
-                    majoring in Computer Science. The choice of profession was meaningful and 
-                    reasonable for me, and I feel really passionate about working in the field 
-                    of web development. During my first year, I received excellent grades, 
-                    which further increased my motivation for further achievements. 
-                    Studying at WSPA provides me with a great opportunity to deepen my knowledge 
-                    in the field of computer science, especially in the context of web development.
+            <div class="cnt">
+                <div class="title">Languages</div>
+                <div class="resume-language-description">
+                    {% for language in languages %}
+                        <div class="resume-language">
+                            <div class="resume-name">{{language.name}}</div>
+                            <div class="resume-rate">
+                                <div class="resume-rate-line" style="width: {{language.rate * 10}}%;"></div>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="resume-skills resume-chapter">
-        <div class="resume-title">Skills</div>
-        <div class="resume-skill-description">
-            {% for skill in skills%}
-                <div class="resume-skill">
-                    <div class="resume-name">{{skill.name}}</div>
-                    <div class="resume-rate" style="width: {{skill.rate * 25}}px;"></div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="resume-languages resume-chapter">
-        <div class="resume-title">Languages</div>
-        <div class="resume-language-description">
-            {% for language in languages %}
-                <div class="resume-language">
-                    <div class="resume-name">{{language.name}}</div>
-                    <div class="resume-rate" style="width: {{language.rate * 25}}px;"></div>
-                </div>
-            {% endfor %}
         </div>
     </div>
 </div>

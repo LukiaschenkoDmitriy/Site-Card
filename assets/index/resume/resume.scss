@@ -1,48 +1,90 @@
 @use "../../colors";
 
-.resume-container {
-    display:grid;
-    grid-template-rows: auto auto;
-    justify-items: center;
-    gap: 10px;
-    max-width: 99%;
+.background-resume {
+    background: colors.$dark-color;
+}
 
-    .resume-chapter {
-        opacity: 0%;
-        display:grid;
-        grid-template-columns: 100%;
-        justify-items: center;
-        width:100%;
+.resume-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 0px;
+    color: white;
+
+
+    .container-res {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
     }
 
-    .resume-rate {
-        position: relative;
-        height:6px;
-        background-color: colors.$red-color;
-        margin: 10px 0px;
-        width:50%;
+    .resume-sub-container {
+        width: 80vw;
+        justify-content: center;
+        height:auto;
 
-        &::before {
-            position: absolute;
-            content: "";
-            width:250px;
-            height:4px;
-            border: 1px solid colors.$red-color;
+        .cnt {
+            flex: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px 40px;
+            height: auto;
+
+            .title {
+                text-align: center;
+                margin: 20px 0px;
+                color: white;
+            }
+
+            .resume-language-description {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                .resume-language {
+                    width: 100%;
+                    margin: 20px 0px;
+                }
+            }
+
+            .resume-education-school {
+                .resume-education-school-title {
+                    text-align: center;
+                    margin: 20px 0px;
+                    font-size: 120%;
+                }
+
+                .resume-education-school-description {
+                    line-height: 30px;
+                    text-align: center;
+                }
+            }
         }
+    }
+
+    .resume-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
     }
 
     .resume-skill-description,
     .resume-language-description {
         display:flex;
-        flex-direction: column;
-        width:90%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width:100%;
     }
 
-    .resume-skill,
     .resume-language {
         display:flex;
-        width:100%;
-        margin: 10px 0px;
+        width:40%;
+        margin: 30px 0px;
 
         .resume-name {
             display: flex;
@@ -53,8 +95,17 @@
             margin:0x;
         }
 
-        .skill-rate {
-            width:70%;
+        .resume-rate {
+            position: relative;
+            height:6px;
+            border: 1px solid colors.$red-color;
+            margin: 20px 0px;
+            width:100%;
+    
+            .resume-rate-line {
+                height:4px;
+                background-color: colors.$red-color;
+            }
         }
     }
 
@@ -63,7 +114,7 @@
         opacity: 0%;
 
         .resume-education-school-title {
-            font-size: 110%;
+            font-size: 120%;
             width:100%;
             text-align: center;
             margin: 10px 0px;
@@ -71,14 +122,23 @@
 
         .resume-education-school-description {
             padding: 0px 100px;
+            width: 60vw;
+            line-height: 35px;
         }
     }
 
     .resume-title {
         text-align: center;
-        font-size: 140%;
         margin: 20px 0px;
         color: rgb(61, 61, 61);
+    }
+}
+
+
+@media only screen and (min-width: 450px) {
+    .resume-sub-container {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -86,20 +146,9 @@ $windowTableSisze: 600px, 768px;
 
 @each $size in $windowTableSisze {
     @media only screen and (min-width: $size) {
-        .resume-education-description {
-            grid-template-columns: auto;
-        }
-
-        .resume-container {
-            grid-template-columns: auto;
-        }
-
-        .resume-education {
-            grid-column: span 1;
-        }
-
-        #chapter-title-resume {
-            grid-column: span 1;
+        .resume-sub-container {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
@@ -108,20 +157,9 @@ $windowDefaultSizes: 992px, 1200px;
 
 @each $size in $windowDefaultSizes {
     @media only screen and (min-width: $size) {
-        .resume-education-description {
-            grid-template-columns: auto auto;
-        }
-
-        .resume-container {
-            grid-template-columns: auto auto;
-        }
-
-        .resume-education {
-            grid-column: span 2;
-        }
-
-        #chapter-title-resume {
-            grid-column: span 2;
+        .resume-sub-container {
+            display: flex;
+            flex-direction: row;
         }
     }
 }

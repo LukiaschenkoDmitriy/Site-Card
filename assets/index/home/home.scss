@@ -10,7 +10,7 @@
   background-image: url("../../../public_html/images/main.jpg");
 
   .contacts {
-    opacity: 0;
+    opacity: 100%;
     position: absolute;
     right: 0;
     margin: 0;
@@ -74,7 +74,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      opacity: 0%;
+      opacity: 100%;
       width:70%;
       h1,span {
         display: flex;
@@ -110,9 +110,9 @@
   .home-scroll-container {
     display: flex;
     align-items: center;
-    width:70%;
+    width:325px;
 
-    opacity: 0%;
+    opacity: 100%;
 
     img:first-child {
       transform:rotate(180deg);
@@ -132,12 +132,12 @@
 
     .scroll-content {
       display: flex;
-      width: 300px;
+      width: 400px;
       overflow: hidden;
       position: relative;
 
       .content {
-        min-width:100%;
+        min-width:200px;
         text-align: center;
         margin: 0px 5px;
         display:inline-block;

@@ -1,22 +1,22 @@
 @use "../../colors";
 
-.title {
-    color: black;
-    font-size: 180%;
-    margin: 20px 0px;
-    font-weight: 400;
-}
-
 .about-container {
-    margin:40px 0px;
-    display: grid;
     justify-items: center;
+    align-items: center;
+    height: auto;
+    padding-top: 200px;
+    padding-bottom: 100px;
 
-    img {
-        opacity: 0%;
-        object-fit: cover;
-        width:80%;
-        background-color: rgb(245,245,245);
+    .image-container {
+        width:50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            opacity: 100%;
+            object-fit:fill;
+            background-color: rgb(245,245,245);
+        }
     }
 
     .about {
@@ -24,6 +24,10 @@
 
         .little-description {
             color: rgb(44, 44, 44);
+        }
+
+        .title {
+            margin: 30px 0px;
         }
 
         .double-element {
@@ -50,7 +54,7 @@
             align-items: center;
 
             .index-button-wrapp {
-                $width: 200px;
+                $width: 300px;
                 $height: 50px;
                 flex-grow: 1;
                 flex-basis: $width;
@@ -112,7 +116,12 @@
 
 @media only screen and (min-width: 450px) {
     .about-container {
-        grid-template-columns: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .image-container {
+            margin-top: 50px;
+        }
     }
 }
   
@@ -120,7 +129,12 @@ $windowTableSisze: 600px, 768px;
 @each $size in $windowTableSisze {
     @media only screen and (min-width: $size) {
         .about-container {
-            grid-template-columns: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .image-container {
+                margin-top: 50px;
+            }
         }
     }
 }
@@ -129,7 +143,8 @@ $windowDefaultSizes: 992px, 1200px;
 @each $size in $windowDefaultSizes {
     @media only screen and (min-width: $size) {
         .about-container {
-            grid-template-columns: 50% 50%;
+            display: flex;
+            flex-direction: row;
         }
     }
 }

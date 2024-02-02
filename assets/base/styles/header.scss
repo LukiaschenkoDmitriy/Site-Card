@@ -1,12 +1,14 @@
 @use "../../colors";
 
 .header_container {
+    display: flex;
+    justify-content: center;
     width:100%;
     position: fixed;
     align-items: center;
     background-color: rgba(colors.$dark-color, .0);
     z-index: 101;
-    opacity: 0;
+    opacity: 100%;
 
     transition: background-color .2s ease;
 

@@ -17,7 +17,7 @@ class SQLService {
         $this->entityManager = $entityManager;
     }
 
-    private function addAndPersistArray(array $array) {
+    private function persistAndFlushArray(array $array) {
         foreach ($array as $key => $object) {
             $this->entityManager->persist($object);
         }
@@ -26,23 +26,26 @@ class SQLService {
     }
 
     public function initContact() {
-        $this->addAndPersistArray([
-            (new Contact())->setName("Linkedin: ")
-                           ->setContact("https://www.linkedin.com/in/dmytrii-lukiashchenko-490987282/")
-                           ->setIcon_path("/images/socialmedia/linkedin_icon.png"),
+        $this->persistAndFlushArray([
+            (new Contact())->setName("LinkedIn")->setContact("https://www.linkedin.com/in/dmytrii-lukiashchenko-490987282/")->setIcon_path("/images/socialmedia/linkedin_icon.png"),
+            (new Contact())->setName("GitHub")->setContact("https://github.com/LukiaschenkoDmitriy")->setIcon_path("/images/socialmedia/github.png"),
+            (new Contact())->setName("Facebook")->setContact("https://www.facebook.com/dmLukiaschenko/")->setIcon_path("/images/socialmedia/facebook_icon.png"),
+            (new Contact())->setName("Phone")->setContact("48883757093")->setIcon_path("/images/socialmedia/telephone_icon.png"),
+            (new Contact())->setName("Phone")->setContact("380685224036")->setIcon_path("/images/socialmedia/telephone_icon.png")
         ]);
     }
 
     public function initLanguages() {
-        $this->addAndPersistArray([
-            (new Language())->setName("Ukraine")->setRate(5),
-            (new Language())->setName("Polish")->setRate(3),
-            (new Language())->setName("English")->setRate(2)
+        $this->persistAndFlushArray([
+            (new Language())->setName("Ukraine")->setRate(9),
+            (new Language())->setName("Polish")->setRate(5),
+            (new Language())->setName("English")->setRate(4),
+            (new Language())->setName("Russian")->setRate(8)
         ]);
     }
 
     public function initProjects() {
-        $this->addAndPersistArray([
+        $this->persistAndFlushArray([
             (new Project())->setLanguage("PHP")
                            ->setName("Website card")
                            ->setGit_path("https://github.com/LukiaschenkoDmitriy/Site-Card")
@@ -55,17 +58,17 @@ class SQLService {
     }
 
     public function initSkills() {
-        $this->addAndPersistArray([
-            (new Skill())->setName("PHP")->setRate(3)->setDescription("helloworld"),
-            (new Skill())->setName("Symfony")->setRate(2)->setDescription(""),
-            (new Skill())->setName("Doctrine")->setRate(2)->setDescription(""),
-            (new Skill())->setName("SASS")->setRate(2)->setDescription(""),
-            (new Skill())->setName("Twig")->setRate(2)->setDescription(""),
-            (new Skill())->setName("TailWind")->setRate(2)->setDescription(""),
-            (new Skill())->setName("Scrum")->setRate(3)->setDescription(""),
-            (new Skill())->setName("Docker")->setRate(1)->setDescription(""),
-            (new Skill())->setName(("Git"))->setRate(3)->setDescription(""),
-            (new Skill())->setName("React")->setRate(1)->setDescription("")
+        $this->persistAndFlushArray([
+            (new Skill())->setName("PHP")->setRate(4)->setBg("images/skill_bg.jpg")->setLogo("images/logo/php.png"),
+            (new Skill())->setName("Symfony")->setRate(3)->setBg("images/skill_bg_2.jpg")->setLogo("images/logo/symfony.png"),
+            (new Skill())->setName("Doctrine")->setRate(2)->setBg("images/skill_bg_3.jpg")->setLogo("images/logo/doctrine.png"),
+            (new Skill())->setName("SASS")->setRate(4)->setBg("images/skill_bg_4.jpg")->setLogo("images/logo/sass.png"),
+            (new Skill())->setName("Twig")->setRate(4)->setBg("images/skill_bg_3.jpg")->setLogo("images/logo/twig.png"),
+            (new Skill())->setName("TailWind")->setRate(4)->setBg("images/skill_bg.jpg")->setLogo("images/logo/tailwind.png"),
+            (new Skill())->setName("Scrum")->setRate(5)->setBg("images/skill_bg_4.jpg")->setLogo("images/logo/scrum.png"),
+            (new Skill())->setName("Docker")->setRate(2)->setBg("images/skill_bg_2.jpg")->setLogo("images/logo/docker.png"),
+            (new Skill())->setName("Git")->setRate(4)->setBg("images/skill_bg_3.jpg")->setLogo("images/logo/github.png"),
+            (new Skill())->setName("React")->setRate(1)->setBg("images/skill_bg.jpg")->setLogo("images/logo/react.png")
 
         ]);
     }

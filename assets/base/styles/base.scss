@@ -1,18 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
 $deviceSizes: 768px, 600px, 992px, 1200px;
 
 .container {
     display: flex;
     justify-content: center;
     z-index:50;
+    width: 80vw;
 }
+
+.title {
+    color: black;
+    font-size: 180%;
+    font-weight: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
 * {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
-    
-    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+
+    font-family: 'Mulish', sans-serif;
 }

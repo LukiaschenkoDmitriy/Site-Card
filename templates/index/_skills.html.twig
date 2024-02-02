@@ -1,0 +1,23 @@
+<div class="resume-container skill-container">
+    <div class="container-res">
+        <div class="resume-sub-container">
+            <div class="resume-skills resume-chapter">
+                <div class="title" id="chapter-skills">Skills</div>
+                <div class="resume-skill-description">
+                    {% for skill in skills%}
+                        <div style="mask: url('{{skill.bg}}');" class="skill">
+                            <img class="bg" src="{{skill.bg}}" alt="">
+                            <div class="skill-cosas">
+                                <img class="logo" src="{{skill.logo}}" alt="">
+                                <div class="skill-name">{{skill.name}}</div>
+                                <div class="skill-progress">
+                                    <div class="line" style="width: {{skill.rate * 10}}%;"></div>   
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
