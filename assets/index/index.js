@@ -2,6 +2,7 @@ import "./home/home.scss";
 import './resume/resume.scss';
 import './about/about.scss';
 import "./skills/skills.scss";
+import "./project/project.scss";
 
 import { homeInit } from "./home/home";
 import { skillsInit } from "./skills/skills";

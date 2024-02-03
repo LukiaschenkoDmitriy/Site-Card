@@ -15,10 +15,15 @@ class Project
 
     #[ORM\Column(length: 255)]
     private ?string $language = null;
+
     #[ORM\Column(length: 255)]
-    private ?string $git_path = null;
+    private ?string $gitPath = null;
+
     #[ORM\Column(length:10000)]
     private ?string $description = null;
+
+    #[ORM\Column]
+    private ?string $languageLogo = null;
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
@@ -71,16 +76,27 @@ class Project
 	/**
 	 * @return 
 	 */
-	public function getGit_path(): ?string {
-		return $this->git_path;
+	public function getGitPath(): ?string {
+		return $this->gitPath;
 	}
 	
 	/**
-	 * @param  $git_path 
+	 * @param  $gitPath 
 	 * @return self
 	 */
-	public function setGit_path(?string $git_path): static {
-		$this->git_path = $git_path;
+	public function setGitPath(?string $gitPath): static {
+		$this->gitPath = $gitPath;
 		return $this;
 	}
+
+    public function getLanguageLogo(): ?string
+    {
+        return $this->languageLogo;
+    }
+
+    public function setLanguageLogo(?string $languageLogo): static
+    {
+        $this->languageLogo = $languageLogo;
+        return $this;
+    }
 }

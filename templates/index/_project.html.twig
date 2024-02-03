@@ -1,0 +1,22 @@
+<div class="project-container">
+    <div class="container-res">
+        <div class="project-sub-container">
+            <div class="title">Projects</div>
+            <div class="projects">
+                {% for project in projects%}
+                    <div class="project">
+                        <div class="project-details">
+
+                            <img class="project-logo" src="{{project.languageLogo}}" alt="">
+                            <div class="project-name">{{project.name}}</div>
+                            <div class="project-description">{{project.description}}</div>
+                            <a href="{{project.gitPath}}">>
+                                <div>GitHub</div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

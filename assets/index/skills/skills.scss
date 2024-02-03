@@ -27,9 +27,9 @@
 
 .skill {
     position: relative;
-    width: 250px;
-    height: 300px;
-    margin: 50px 40px;
+    width: 200px;
+    height: 250px;
+    margin: 25px 20px;
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
@@ -46,7 +46,7 @@
         .skill-cosas {
             img.logo {
                 width: 40px;
-                height: 40px;
+                height: auto;
             }
 
             .skill-name {
@@ -58,7 +58,7 @@
     img {
         position: absolute;
         width: 100%;
-        transform: scale(2.5) translateY(40px);
+        transform: scale(2.5) translateY(20px);
         filter: blur(5px) brightness(50%);
         -webkit-filter: blur(1px) brightness(50%); /* Для Safari і Chrome */
         -moz-filter: blur(5px) brightness(50%); /* Для Firefox */
@@ -81,14 +81,14 @@
         img.logo {
             filter: none;
             width: 30px;
-            height: 30px;
+            height: auto;
             transition: all .5s ease;
         }
 
         .skill-name {
             color: #fff;
             font-size: 120%;
-            margin-top: 200px;
+            margin-top: 150px;
             transition: all .5s ease;
         }
 

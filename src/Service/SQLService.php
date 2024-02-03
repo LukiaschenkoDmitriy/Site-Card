@@ -48,11 +48,13 @@ class SQLService {
         $this->persistAndFlushArray([
             (new Project())->setLanguage("PHP")
                            ->setName("Website card")
-                           ->setGit_path("https://github.com/LukiaschenkoDmitriy/Site-Card")
-                           ->setDescription("The project included the development of my own business card website based on the Symfony framework, which allowed me to present my skills and services in the field of web development. Using tools such as Doctrine, SASS, MySQL, and Webpack, I created a highly efficient and stylish website. The challenges I faced: Webpack and resource optimization, Working with Doctrine and MySQL, Working with SASS"),
+                           ->setGitPath("https://github.com/LukiaschenkoDmitriy/Site-Card")
+                           ->setLanguageLogo("/images/logo/php.png")
+                           ->setDescription("The project included the development of my own business card website based on the Symfony framework. Using tools such as Doctrine, SASS, MySQL, and Webpack, The challenges i faced: Webpack and resource optimization, Working with Doctrine and MySQL, Working with SASS"),
             (new Project())->setLanguage("PHP")
                            ->setName("Web chat site")
-                           ->setGit_path("https://github.com/LukiaschenkoDmitriy/WChat")
+                           ->setGitPath("https://github.com/LukiaschenkoDmitriy/WChat")
+                           ->setLanguageLogo("/images/logo/php.png")
                            ->setDescription("The WChat - Web Chat for School Students project is an innovative platform for simplifying communication among students. Based on Tailwind, SASS, Twig, Webpack, Doctrine, and Scrum technologies, the project offers a highly efficient and intuitive information exchange system.")
         ]);
     }
