@@ -1,0 +1,42 @@
+<div class="footer-container">
+    <div class="container-res">
+        <div class="footer-chapter-1">
+            <div class="footer-title">Useful Links</div>
+            <div class="footer-useful-links">
+                <a href="" class="link">Home</a>
+                <a href="" class="link">About me</a>
+                <a href="" class="link">Education</a>
+                <a href="" class="link">Skills</a>
+                <a href="" class="link">Projects</a>
+            </div>
+        </div>
+        <div class="footer-chapter-2">
+            <div class="title">Contact</div>
+            <form action="{{path('app_mail')}}" method="post">
+                <div class="wrap-wrap-block">
+                    <div class="wrap-block">
+                        <div class="input-block">
+                            <label for="input-name">Your name*</label>
+                            <input type="text" name="name" id="input-name" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="input-email">Your email*</label>
+                            <input type="email" name="email" id="input-email" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="input-theme">Theme</label>
+                            <input type="text" name="theme" id="input-theme">
+                        </div>
+                    </div>
+                    <div class="wrap-block">
+                        <div class="input-block">
+                            <label for="input-message">Message</label>
+                            <textarea name="message" id="input-message" cols="5" rows="7"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import './resume/resume.scss';
 import './about/about.scss';
 import "./skills/skills.scss";
 import "./project/project.scss";
+import "./footer/footer.scss";
 
 import { homeInit } from "./home/home";
 import { skillsInit } from "./skills/skills";
