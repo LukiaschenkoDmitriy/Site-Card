@@ -1,3 +1,6 @@
+import "animate.css";
+import "wowjs";
+
 import "./home/home.scss";
 import './resume/resume.scss';
 import './about/about.scss';

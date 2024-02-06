@@ -3,12 +3,14 @@
         <div class="resume-sub-container">
             <div class="resume-skills resume-chapter">
                 <div class="title" id="chapter-skills">Skills</div>
-                <div class="resume-skill-description">
+                <div class="resume-skill-description" style="overflow: hidden;">
+                    {% set counter = 1 %}
                     {% for skill in skills%}
-                        <div style="mask: url('{{skill.bg}}');" class="skill">
+                        {% set counter = counter + 1 %}
+                        <div style="mask: url('{{skill.bg}}');" class="skill wow animate__animated animate__flipInX" data-wow-delay="{{0.15*counter}}s" data-wow-duration="1s">
                             <img class="bg" src="{{skill.bg}}" alt="">
                             <div class="skill-cosas">
-                                <img class="logo" src="{{skill.logo}}" alt="">
+                                <img rel="preload" loading="lazy" class="logo" src="{{skill.logo}}" alt="">
                                 <div class="skill-name">{{skill.name}}</div>
                                 <div class="skill-progress">
                                     <div class="line" style="width: {{skill.rate * 10}}%;"></div>   

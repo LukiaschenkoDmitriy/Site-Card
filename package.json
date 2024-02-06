@@ -20,8 +20,10 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "animate.css": "^4.1.1",
         "animejs": "^3.2.1",
         "gsap": "^3.12.2",
-        "typeit": "^8.7.1"
+        "typeit": "^8.7.1",
+        "wowjs": "^1.1.3"
     }
 }

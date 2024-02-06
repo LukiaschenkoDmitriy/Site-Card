@@ -1,7 +1,7 @@
 <div class="resume-container background-resume">
     <div class="container-res">
-        <div class="resume-sub-container">
-            <div class="cnt">
+        <div class="resume-sub-container" style="overflow:hidden;">
+            <div class="cnt wow animate__animated animate__fadeInRight" data-wow-duration="1s">
                 <div class="title" id="chapter-education">Education</div>
                 <div class="resume-education-school">
                     <div class="resume-education-school-title">WSPA (Hight School)</div>
@@ -16,13 +16,15 @@
                     </div>
                 </div>
             </div>
-            <div class="cnt">
+            <div class="cnt wow animate__animated animate__fadeInLeft" data-wow-duration="1s">
                 <div class="title">Languages</div>
                 <div class="resume-language-description">
+                    {% set counter = 1 %}
                     {% for language in languages %}
+                        {% set counter = counter + 1 %}
                         <div class="resume-language">
                             <div class="resume-name">{{language.name}}</div>
-                            <div class="resume-rate">
+                            <div class="resume-rate wow animate__animated animate__flipInX" data-wow-delay="{{0.15*counter}}s" data-wow-duration="1s">
                                 <div class="resume-rate-line" style="width: {{language.rate * 10}}%;"></div>
                             </div>
                         </div>

@@ -1,12 +1,13 @@
-<div class="project-container">
+<div class="project-container" style="overflow: hidden;">
     <div class="container-res">
         <div class="project-sub-container">
             <div class="title" id="chapter-projects">Projects</div>
             <div class="projects">
+                {% set counter = 1 %}
                 {% for project in projects%}
-                    <div class="project">
+                    {% set counter = counter + 1 %}
+                    <div class="project wow animate__animated animate__fadeInUp" data-wow-delay="{{0.15*counter}}s" data-wow-duration="1s">
                         <div class="project-details">
-
                             <img class="project-logo" src="{{project.languageLogo}}" alt="">
                             <div class="project-name">{{project.name}}</div>
                             <div class="project-description">{{project.description}}</div>
