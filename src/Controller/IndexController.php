@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
 {
-    #[Route('/', name: 'app_index')]
+    #[Route('/', name: 'app_index', methods:"GET")]
     public function index(EntityManagerInterface $entityManagerInterface): Response
     {
         $skills = $entityManagerInterface->getRepository(Skill::class)->findAll();
@@ -34,20 +34,21 @@ class IndexController extends AbstractController
 
     #[Route("/send-mail", methods:"POST", name:"app_mail")]
     public function mail(Request $request, MailerInterface $mailerInterface): Response {
-        $name = $request->request->get("name");
-        $email = $request->request->get("email");
-        $theme = $request->request->get("theme");
-        $message = $request->request->get("message");
+        if ($request->isMethod("POST")) {
+            $name = $request->request->get("name");
+            $email = $request->request->get("email");
+            $theme = $request->request->get("theme");
+            $message = $request->request->get("message");
 
-        $email = (new Email())
-                 ->from($email)
-                 ->to("lukiaschenkoff@gmail.com")
-                 ->priority(Email::PRIORITY_HIGHEST)
-                 ->subject("[Site Card]".$theme)
-                 ->html("<div>".$name."</div>"."<div>".$message."</div>");
+            $email = (new Email())
+                    ->from($email)
+                    ->to("lukiaschenkoff@gmail.com")
+                    ->priority(Email::PRIORITY_HIGHEST)
+                    ->subject("[Site Card]".$theme)
+                    ->html("<div>".$name."</div>"."<div>".$message."</div>");
 
-        $mailerInterface->send($email);
-
+            $mailerInterface->send($email);
+        }
         return $this->redirectToRoute("app_index");
     }
 }

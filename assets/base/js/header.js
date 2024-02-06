@@ -25,6 +25,8 @@ function headerFunctions() {
     scrollIntoViewBy("#chapter-title-resume", ".head-resume-button", -100);
     scrollIntoViewBy("#chapter-education", ".head-education-button", -100);
     scrollIntoViewBy("#chapter-skills", ".head-skills-button", -100);
+    scrollIntoViewBy("#chapter-contact", ".head-contacts-button", -100);
+    scrollIntoViewBy("#chapter-projects", ".head-projects-button", -100)
 }
 function headerScrollTrigger() {
     addEventListener("scroll", function () {

@@ -3,15 +3,15 @@
         <div class="footer-chapter-1">
             <div class="footer-title">Useful Links</div>
             <div class="footer-useful-links">
-                <a href="" class="link">Home</a>
-                <a href="" class="link">About me</a>
-                <a href="" class="link">Education</a>
-                <a href="" class="link">Skills</a>
-                <a href="" class="link">Projects</a>
+                <div class="link head-home-button">Home</div>
+                <div class="link head-about-me-button">About me</div>
+                <div class="link head-education-button">Education</div>
+                <div class="link head-skills-button">Skills</div>
+                <div class="link head-projects-button">Projects</div>
             </div>
         </div>
         <div class="footer-chapter-2">
-            <div class="title">Contact</div>
+            <div class="title" id="chapter-contact">Contact</div>
             <form action="{{path('app_mail')}}" method="post">
                 <div class="wrap-wrap-block">
                     <div class="wrap-block">
@@ -33,9 +33,9 @@
                             <label for="input-message">Message</label>
                             <textarea name="message" id="input-message" cols="5" rows="7"></textarea>
                         </div>
+                        <button type="submit">Send</button>
                     </div>
                 </div>
-                <button type="submit">Send</button>
             </form>
         </div>
     </div>
