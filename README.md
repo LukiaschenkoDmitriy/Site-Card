@@ -1,3 +1,3 @@
 # Site Card
 
-https://lukiashchenkodm.me/ - View in real life.
+[https://lukiashchenkodm.me/](https://lukiashchenkodm.site/)https://lukiashchenkodm.site/ - View in real life.
